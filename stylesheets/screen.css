@@ -1,0 +1,244 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 11, ../sass/screen.scss */
+html {
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+  padding: 30px;
+}
+
+/* line 18, ../sass/screen.scss */
+body {
+  height: 100%;
+  background: linear-gradient(#00d8ff, #00ff9e);
+}
+
+/* line 23, ../sass/screen.scss */
+main {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
+}
+/* line 31, ../sass/screen.scss */
+main .index, main .list, main .details {
+  display: flex;
+  flex-direction: column;
+}
+/* line 36, ../sass/screen.scss */
+main .index {
+  width: 350px;
+  border-radius: 15px 0 0 15px;
+  background-color: #e5e5e5;
+}
+/* line 40, ../sass/screen.scss */
+main .index header {
+  background-color: #CBCBCB;
+  border-radius: 15px 0 0 0;
+}
+/* line 45, ../sass/screen.scss */
+main .list {
+  width: 350px;
+  background-color: #f1f1f1;
+}
+/* line 48, ../sass/screen.scss */
+main .list header {
+  background-color: #e5e5e5;
+}
+/* line 51, ../sass/screen.scss */
+main .list .td-container {
+  padding: 0;
+}
+/* line 55, ../sass/screen.scss */
+main .details {
+  flex-grow: 1;
+  border-radius: 0 15px 15px 0;
+  background-color: #fefefe;
+}
+/* line 59, ../sass/screen.scss */
+main .details header {
+  background-color: #f1f1f1;
+  border-radius: 0 15px 0 0;
+}
+/* line 63, ../sass/screen.scss */
+main .details #details_ctn {
+  flex-grow: 1;
+}
+
+/* line 69, ../sass/screen.scss */
+header {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+/* line 76, ../sass/screen.scss */
+header h2 {
+  float: left;
+}
+/* line 79, ../sass/screen.scss */
+header span {
+  float: right;
+  padding-top: 12px;
+  cursor: pointer;
+}
+
+/* line 86, ../sass/screen.scss */
+.td-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  flex-grow: 1;
+  padding: 15px;
+}
+/* line 92, ../sass/screen.scss */
+.td-container .lists {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+/* line 95, ../sass/screen.scss */
+.td-container .lists li {
+  padding: 15px;
+  height: 90px;
+  border-bottom: 1px solid #d8d8d8;
+  cursor: pointer;
+}
+/* line 96, ../sass/screen.scss */
+.td-container .lists li:nth-of-type(odd) {
+  background-color: #d8d8d8;
+}
+/* line 104, ../sass/screen.scss */
+.td-container .lists li h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* line 109, ../sass/screen.scss */
+.td-container .lists li h4 {
+  font-size: .9rem;
+  margin-bottom: 8px;
+}
+/* line 113, ../sass/screen.scss */
+.td-container .lists li p {
+  font-size: .8rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* line 123, ../sass/screen.scss */
+textarea {
+  resize: none;
+}
+
+/* line 128, ../sass/screen.scss */
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: #F9F9F9;
+  opacity: 1;
+}
+
+/* line 133, ../sass/screen.scss */
+.form-group.my-form-group {
+  display: flex;
+  align-items: stretch;
+}
+/* line 136, ../sass/screen.scss */
+.form-group.my-form-group div {
+  width: 50px;
+  border-radius: 4px 0 0 4px;
+  background-color: #eee;
+  line-height: 32px;
+  text-align: center;
+  box-sizing: border-box;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+/* line 147, ../sass/screen.scss */
+.form-group.my-form-group .form-control {
+  border-radius: 0 4px 4px 0;
+  flex-grow: 1;
+  width: initial;
+}
+
+/* line 155, ../sass/screen.scss */
+.form-group.my-form-group.time .form-control:first-of-type {
+  border-radius: 0;
+  border-right: none;
+}
+/* line 159, ../sass/screen.scss */
+.form-group.my-form-group.time div:last-of-type {
+  border-radius: 0;
+}

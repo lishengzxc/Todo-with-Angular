@@ -1,0 +1,162 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$backColor: #CBCBCB;
+$radius: 15px;
+
+html {
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+  padding: 30px;
+}
+
+body {
+  height: 100%;
+  background: linear-gradient(rgb(0, 216, 255), rgb(0, 255, 158));
+}
+
+main {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  border-radius: $radius;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, .5);
+
+  .index, .list, .details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .index {
+    width: 350px;
+    border-radius: $radius 0 0 $radius;
+    background-color: lighten($backColor, 10%);
+    header {
+      background-color: $backColor;
+      border-radius: $radius 0 0 0;
+    }
+  }
+  .list {
+    width: 350px;
+    background-color: lighten($backColor, 15%);
+    header {
+      background-color: lighten($backColor, 10%);
+    }
+    .td-container {
+      padding: 0;
+    }
+  }
+  .details {
+    flex-grow: 1;
+    border-radius: 0 $radius $radius 0;
+    background-color: lighten($backColor, 20%);
+    header {
+      background-color: lighten($backColor, 15%);
+      border-radius: 0 $radius 0 0;
+    }
+    #details_ctn {
+      flex-grow: 1;
+    }
+  }
+}
+
+header {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  font-weight: bold;
+  flex-shrink: 0;
+  h2 {
+    float: left;
+  }
+  span {
+    float: right;
+    padding-top: 12px;
+    cursor: pointer;
+  }
+}
+
+.td-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  flex-grow: 1;
+  padding: 15px;
+  .lists {
+    flex-grow: 1;
+    overflow-y: scroll;
+    li {
+      &:nth-of-type(odd) {
+        background-color: lighten($backColor, 5%);
+      }
+
+      padding: 15px;
+      height: 90px;
+      border-bottom: 1px solid lighten($backColor, 5%);
+      cursor: pointer;
+      h3 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      h4 {
+        font-size: .9rem;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: .8rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: #F9F9F9;
+  opacity: 1;
+}
+
+.form-group.my-form-group {
+  display: flex;
+  align-items: stretch;
+  div {
+    width: 50px;
+    border-radius: 4px 0 0 4px;
+    background-color: #eee;
+    line-height: 32px;
+    text-align: center;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
+  .form-control {
+    border-radius: 0 4px 4px 0;
+    flex-grow: 1;
+    width: initial;
+  }
+}
+
+.form-group.my-form-group.time {
+  .form-control:first-of-type {
+    border-radius: 0;
+    border-right: none;
+  }
+  div:last-of-type {
+    border-radius: 0;
+  }
+}
