@@ -1,4 +1,4 @@
-var archy = require('../');
+var archy = require('../index');
 
 var s = archy({
   label : 'beep\none\ntwo',
