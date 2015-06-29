@@ -107,36 +107,40 @@ main .index header {
   background-color: #CBCBCB;
   border-radius: 15px 0 0 0;
 }
-/* line 46, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
+main .index .td-container {
+  padding: 0;
+}
+/* line 49, ../sass/screen.scss */
 main .list {
   width: 350px;
   background-color: #f1f1f1;
 }
-/* line 49, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 main .list header {
   background-color: #e5e5e5;
 }
-/* line 52, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 main .list .td-container {
   padding: 0;
 }
-/* line 56, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 main .details {
   flex-grow: 1;
   border-radius: 0 15px 15px 0;
   background-color: #fefefe;
 }
-/* line 60, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 main .details header {
   background-color: #f1f1f1;
   border-radius: 0 15px 0 0;
 }
-/* line 64, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 main .details #details_ctn {
   flex-grow: 1;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 header {
   position: relative;
   height: 40px;
@@ -145,77 +149,191 @@ header {
   font-weight: bold;
   flex-shrink: 0;
 }
-/* line 77, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 header h2 {
   float: left;
 }
-/* line 80, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 header span {
   float: right;
   padding-top: 12px;
   cursor: pointer;
 }
 
-/* line 87, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 .td-container {
   display: flex;
   flex-direction: column;
   width: auto;
   flex-grow: 1;
   padding: 15px;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
-/* line 94, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
+.td-container .btn-group {
+  display: flex;
+  flex-flow: row-reverse;
+}
+/* line 101, ../sass/screen.scss */
+.td-container .btn-group .ok {
+  border-radius: 3px 0 0 3px !important;
+}
+/* line 104, ../sass/screen.scss */
+.td-container .btn-group .cancel {
+  border-radius: 0 3px 3px 0 !important;
+}
+/* line 108, ../sass/screen.scss */
 .td-container .lists {
   flex-grow: 1;
+  border-radius: 0 0 0 15px;
+  overflow-y: scroll;
 }
-/* line 96, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .td-container .lists li {
+  position: relative;
   padding: 15px;
   height: 90px;
   border-bottom: 1px solid #d8d8d8;
   cursor: pointer;
 }
-/* line 97, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .td-container .lists li:nth-of-type(odd) {
   background-color: #fefefe;
 }
-/* line 105, ../sass/screen.scss */
-.td-container .lists li h3 {
+/* line 121, ../sass/screen.scss */
+.td-container .lists li h3.list-item {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-/* line 110, ../sass/screen.scss */
-.td-container .lists li h4 {
+/* line 129, ../sass/screen.scss */
+.td-container .lists li h4.list-item {
   font-size: .9rem;
   margin-bottom: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-/* line 114, ../sass/screen.scss */
-.td-container .lists li p {
+/* line 136, ../sass/screen.scss */
+.td-container .lists li p.list-item {
   font-size: .8rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
-/* line 124, ../sass/screen.scss */
-textarea {
-  resize: none;
+/* line 143, ../sass/screen.scss */
+.td-container .lists li img.index-item {
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid grey;
+}
+/* line 150, ../sass/screen.scss */
+.td-container .lists li h3.index-item {
+  margin: 5px 0 15px 70px;
+  width: 135px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+/* line 159, ../sass/screen.scss */
+.td-container .lists li h3.index-item[contentEditable="true"] {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  font-size: .9rem;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+/* line 168, ../sass/screen.scss */
+.td-container .lists li h3.index-item[contentEditable="true"]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+/* line 176, ../sass/screen.scss */
+.td-container .lists li h4.index-item {
+  margin: 5px 0 15px 70px;
+  font-size: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 182, ../sass/screen.scss */
+.td-container .lists li h4.index-item[contentEditable="true"] {
+  border: 1px solid lightgray;
+  width: 170px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  height: 25px;
+  line-height: 25px;
+  padding-left: 10px;
+}
+/* line 190, ../sass/screen.scss */
+.td-container .lists li h4.index-item[contentEditable="true"]:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+/* line 198, ../sass/screen.scss */
+.td-container .lists li span.index-item.num {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  font-size: 0.7rem;
+}
+/* line 212, ../sass/screen.scss */
+.td-container .lists li .btn.ok {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 6px 6px 0 0;
+}
+/* line 218, ../sass/screen.scss */
+.td-container .lists li .btn.cancel {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 0 0 6px 6px;
 }
 
-/* line 129, ../sass/screen.scss */
+/* line 228, ../sass/screen.scss */
+textarea {
+  resize: none;
+  margin-bottom: 15px;
+}
+
+/* line 234, ../sass/screen.scss */
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
   background-color: #F9F9F9;
   opacity: 1;
 }
 
-/* line 134, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 .form-group.my-form-group {
   display: flex;
   align-items: stretch;
 }
-/* line 137, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 .form-group.my-form-group div {
   width: 50px;
   border-radius: 4px 0 0 4px;
@@ -227,19 +345,19 @@ textarea {
   border-bottom: 1px solid #ccc;
   border-left: 1px solid #ccc;
 }
-/* line 148, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 .form-group.my-form-group .form-control {
   border-radius: 0 4px 4px 0;
   flex-grow: 1;
   width: initial;
 }
 
-/* line 156, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 .form-group.my-form-group.time .form-control:first-of-type {
   border-radius: 0;
   border-right: none;
 }
-/* line 160, ../sass/screen.scss */
+/* line 265, ../sass/screen.scss */
 .form-group.my-form-group.time div:last-of-type {
   border-radius: 0;
 }

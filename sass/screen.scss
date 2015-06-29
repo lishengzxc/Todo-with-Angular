@@ -42,6 +42,9 @@ main {
       background-color: $backColor;
       border-radius: $radius 0 0 0;
     }
+    .td-container {
+      padding: 0;
+    }
   }
   .list {
     width: 350px;
@@ -90,32 +93,133 @@ header {
   width: auto;
   flex-grow: 1;
   padding: 15px;
-  overflow-y: scroll;
+  overflow-y: hidden;
+
+  .btn-group {
+    display: flex;
+    flex-flow: row-reverse;
+    .ok {
+      border-radius: 3px 0 0 3px !important;
+    }
+    .cancel {
+      border-radius: 0 3px 3px 0 !important;
+    }
+  }
   .lists {
     flex-grow: 1;
+    border-radius: 0 0 0 $radius;
+    overflow-y: scroll;
     li {
       &:nth-of-type(odd) {
         background-color: lighten($backColor, 20%);
       }
-
+      position: relative;
       padding: 15px;
       height: 90px;
       border-bottom: 1px solid lighten($backColor, 5%);
       cursor: pointer;
-      h3 {
+      h3.list-item {
         font-size: 1.1rem;
         font-weight: bold;
         margin-bottom: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
-      h4 {
+      h4.list-item {
         font-size: .9rem;
         margin-bottom: 8px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
-      p {
+      p.list-item {
         font-size: .8rem;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+      }
+
+      img.index-item {
+        float: left;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid grey;
+      }
+      h3.index-item {
+        margin: 5px 0 15px 70px;
+        width: 135px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        box-sizing: border-box;
+        &[contentEditable="true"] {
+          margin-top: 0px;
+          margin-bottom: 5px;
+          border: 1px solid lightgray;
+          border-radius: 6px;
+          font-size: .9rem;
+          height: 30px;
+          line-height: 30px;
+          padding-left: 10px;
+          &:focus {
+            border-color: #66afe9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+          }
+        }
+      }
+      h4.index-item {
+        margin: 5px 0 15px 70px;
+        font-size: 1rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        &[contentEditable="true"] {
+          border: 1px solid lightgray;
+          width: 170px;
+          border-radius: 6px;
+          font-size: 0.7rem;
+          height: 25px;
+          line-height: 25px;
+          padding-left: 10px;
+          &:focus {
+            border-color: #66afe9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+          }
+        }
+      }
+      span.index-item.num {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        display: block;
+        height: 20px;
+        width: 20px;
+        background-color: red;
+        color: #fff;
+        border-radius: 50%;
+        line-height: 20px;
+        text-align: center;
+        font-size: 0.7rem;
+      }
+      .btn.ok {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border-radius: 6px 6px 0 0;
+      }
+      .btn.cancel {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        border-radius: 0 0 6px 6px;
       }
     }
   }
@@ -123,6 +227,7 @@ header {
 
 textarea {
   resize: none;
+  margin-bottom: 15px;
 }
 
 
