@@ -1,0 +1,17 @@
+<div class="list">
+    <header>
+        <h2>任务列表</h2>
+        <span class="glyphicon glyphicon-plus"></span>
+    </header>
+    <div class="td-container">
+        <ul class="lists">
+            <li ng-repeat="list in tasks">
+                <h3 class="list-item">{{list.taskName}}</h3>
+                <h4 class="list-item">{{list.taskTimeStart + '~' + list.taskTimeEnd}}</h4>
+
+                <p class="list-item">{{list.taskContent}}</p>
+            </li>
+
+        </ul>
+    </div>
+</div>
