@@ -1,0 +1,26 @@
+<div class="index" ng-controller="IndexCtrl">
+    <header>
+        <h2>任务首页</h2>
+        <span class="glyphicon glyphicon-plus" ng-click="addTaskClass($event)"></span>
+    </header>
+    <div class="td-container">
+        <ul class="lists">
+            <li class="index-items" ng-show="addTaskClassBoxDisplay">
+                <img class="index-item" src="images/12.jpg" alt=""/>
+
+                <input class="main-title" ng-model="addTaskClassPrep.taskClassMainTitle" type="text">
+                <input class="sub-title" ng-model="addTaskClassPrep.taskClassSubTitle" type="text">
+                <button type="button" class="btn btn-primary btn-sm ok" ng-click="addTaskClassOK($event)">确定</button>
+                <button type="button" class="btn btn-info btn-sm cancel" ng-click="addTaskClassCancel($event)">取消
+                </button>
+            </li>
+            <li class="index-items" ng-repeat="item in taskClass">
+                <img class="index-item" ng-src="images/{{item.taskClassId}}.jpg" alt=""/>
+
+                <h3 class="index-item">{{item.taskClassMainTitle}}</h3>
+                <h4 class="index-item">{{item.taskClassSubTitle}}</h4>
+                <span class="index-item num" ng-show="item.taskClassNum > 0">{{item.taskClassNum}}</span>
+            </li>
+        </ul>
+    </div>
+</div>
