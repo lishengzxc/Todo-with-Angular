@@ -13,26 +13,31 @@ angular.module('todoWithAngularApp').controller('IndexCtrl', function ($scope) {
         taskClassSubTitle: ''
     };
 
-    $scope.addTaskClass = function () {
+    $scope.addTaskClass = function ($event) {
+        $event.stopPropagation();
         for (var i in $scope.addTaskClassPrep) {
             $scope.addTaskClassPrep[i] = '';
         }
         $scope.addTaskClassBoxDisplay = !$scope.addTaskClassBoxDisplay;
     };
 
-    $scope.addTaskClassOK = function () {
+    $scope.addTaskClassOK = function ($event) {
+        $event.stopPropagation();
         var id = $scope.taskClass[$scope.taskClass.length - 1].taskClassId + 1;
-        console.log($scope.addTaskClassPrep);
         $scope.taskClass.push({
             taskClassId: id,
             taskClassMainTitle: $scope.addTaskClassPrep.taskClassMainTitle,
             taskClassSubTitle: $scope.addTaskClassPrep.taskClassSubTitle,
             taskClassNum: 0
         });
-        $scope.addTaskClass();
+        $scope.addTaskClass($event);
     };
 
-    $scope.addTaskClassCancel = function () {
-        $scope.addTaskClass();
+    $scope.addTaskClassCancel = function ($event) {
+        $scope.addTaskClass($event);
+    };
+
+    $scope.chooseTaskClass = function () {
+        $scope.nowClassId = this.item.taskClassId;
     };
 });

@@ -8,9 +8,9 @@
             <li class="index-items" ng-show="addTaskClassBoxDisplay">
                 <img class="index-item" src="images/12.jpg" alt=""/>
 
-                <input class="main-title" ng-model="addTaskClassPrep.taskClassMainTitle" type="text">
-                <input class="sub-title" ng-model="addTaskClassPrep.taskClassSubTitle" type="text">
-                <button type="button" class="btn btn-primary btn-sm ok" ng-click="addTaskClassOK($event)">确定</button>
+                <input class="main-title" ng-model="addTaskClassPrep.taskClassMainTitle" type="text" required>
+                <input class="sub-title" ng-model="addTaskClassPrep.taskClassSubTitle" type="text" required>
+                <button type="submit" class="btn btn-primary btn-sm ok" ng-click="addTaskClassOK($event)">确定</button>
                 <button type="button" class="btn btn-info btn-sm cancel" ng-click="addTaskClassCancel($event)">取消
                 </button>
             </li>

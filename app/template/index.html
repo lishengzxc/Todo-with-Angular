@@ -5,7 +5,7 @@
     </header>
     <div class="td-container">
         <ul class="lists">
-            <li class="index-items" ng-show="addTaskClassBoxDisplay">
+            <li class="index-items add" ng-show="addTaskClassBoxDisplay">
                 <img class="index-item" src="images/12.jpg" alt=""/>
 
                 <input class="main-title" ng-model="addTaskClassPrep.taskClassMainTitle" type="text" required>
@@ -14,7 +14,7 @@
                 <button type="button" class="btn btn-info btn-sm cancel" ng-click="addTaskClassCancel($event)">取消
                 </button>
             </li>
-            <li class="index-items" ng-repeat="item in taskClass">
+            <li class="index-items" ng-repeat="item in taskClass" ng-click="chooseTaskClass($event)">
                 <img class="index-item" ng-src="images/{{item.taskClassId}}.jpg" alt=""/>
 
                 <h3 class="index-item">{{item.taskClassMainTitle}}</h3>
