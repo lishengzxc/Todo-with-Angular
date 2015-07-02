@@ -64,4 +64,5 @@ angular.module('todoWithAngularApp').controller('MainCtrl', function ($scope) {
     $scope.$watch('nowTaskId', function () {
         $scope.nowTask = $scope.tasks[$scope.nowTaskId - 1];
     });
+
 });
