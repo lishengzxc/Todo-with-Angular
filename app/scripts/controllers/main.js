@@ -26,6 +26,7 @@ angular.module('todoWithAngularApp').controller('MainCtrl', function ($scope) {
     $scope.nowClassId = $scope.taskClass[0].taskClassId;
 
     $scope.nowTaskId = 0;
+    $scope.nowTask = {};
 
     $scope.detailsStats = true;
 
@@ -58,4 +59,9 @@ angular.module('todoWithAngularApp').controller('MainCtrl', function ($scope) {
         taskTimeEnd: '2015-7-28',
         taskContent: '一些文字它是摘要一些文字它是摘要一些文字它是摘要一些文字它是摘要一些文字它是摘要一些文字它是摘要一些文字它是摘要'
     }];
+
+
+    $scope.$watch('nowTaskId', function () {
+        $scope.nowTask = $scope.tasks[$scope.nowTaskId - 1];
+    });
 });
