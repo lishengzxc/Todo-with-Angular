@@ -113,7 +113,9 @@ header {
         border-radius: 0 0 0 $radius;
         overflow-y: scroll;
         li {
-
+            &:hover {
+                background-color: #dfdfdf;
+            }
             .main-title, .sub-title {
                 margin-left: 10px;
                 height: 30px;

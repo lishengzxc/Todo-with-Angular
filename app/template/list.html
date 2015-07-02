@@ -1,7 +1,7 @@
-<div class="list">
+<div class="list" ng-controller="ListCtrl">
     <header>
         <h2>任务列表</h2>
-        <span class="glyphicon glyphicon-plus"></span>
+        <span class="glyphicon glyphicon-plus" ng-click="addTask($event)"></span>
     </header>
     <div class="td-container">
         <ul class="lists">

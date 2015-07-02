@@ -5,16 +5,18 @@
     </header>
     <div class="td-container">
         <ul class="lists">
-            <li class="index-items" ng-show="addTaskClassBoxDisplay">
+            <li class="index-items add" ng-show="addTaskClassBoxDisplay">
                 <img class="index-item" src="images/12.jpg" alt=""/>
 
-                <input class="main-title" ng-model="addTaskClassPrep.taskClassMainTitle" type="text" required>
-                <input class="sub-title" ng-model="addTaskClassPrep.taskClassSubTitle" type="text" required>
-                <button type="submit" class="btn btn-primary btn-sm ok" ng-click="addTaskClassOK($event)">确定</button>
-                <button type="button" class="btn btn-info btn-sm cancel" ng-click="addTaskClassCancel($event)">取消
-                </button>
+                <form name="myForm">
+                    <input class="main-title" ng-model="addTaskClassPrep.taskClassMainTitle" type="text" required>
+                    <input class="sub-title" ng-model="addTaskClassPrep.taskClassSubTitle" type="text" required>
+                    <input type="submit" class="btn btn-primary btn-sm ok" ng-click="addTaskClassOK($event)" value="确定" ng-disabled="true">
+                    <button type="button" class="btn btn-info btn-sm cancel" ng-click="addTaskClassCancel($event)">取消
+                    </button>
+                </form>
             </li>
-            <li class="index-items" ng-repeat="item in taskClass">
+            <li class="index-items" ng-repeat="item in taskClass" ng-click="chooseTaskClass($event)">
                 <img class="index-item" ng-src="images/{{item.taskClassId}}.jpg" alt=""/>
 
                 <h3 class="index-item">{{item.taskClassMainTitle}}</h3>

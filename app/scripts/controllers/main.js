@@ -15,15 +15,19 @@ angular.module('todoWithAngularApp').controller('MainCtrl', function ($scope) {
         taskClassId: 1,
         taskClassMainTitle: '主标题1g',
         taskClassSubTitle: '副标题1副标题1副标题1g',
-        taskClassNum: 5
+        taskClassNum: 2
     },{
         taskClassId: 2,
         taskClassMainTitle: '主标题2g',
         taskClassSubTitle: '副标题1副标题1副标题1g',
-        taskClassNum: 5
+        taskClassNum: 2
     }];
 
     $scope.nowClassId = $scope.taskClass[0].taskClassId;
+
+    $scope.nowTaskId = 0;
+
+    $scope.detailsStats = true;
 
     $scope.tasks = [{
         taskId: 1,
