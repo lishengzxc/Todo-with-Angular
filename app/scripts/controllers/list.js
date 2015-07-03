@@ -12,5 +12,6 @@ angular.module('todoWithAngularApp').controller('ListCtrl', function ($scope) {
     };
     $scope.chooseTask = function () {
         $scope.nowTaskId = this.list.taskId;
+        $scope.tmpIndex = this.$index;
     };
 });

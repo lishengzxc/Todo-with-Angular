@@ -28,6 +28,8 @@ angular.module('todoWithAngularApp').controller('MainCtrl', function ($scope) {
     $scope.nowTaskId = 0;
     $scope.nowTask = {};
 
+    $scope.tmpIndex = 0;
+
     $scope.detailsStats = true;
 
     $scope.tasks = [{

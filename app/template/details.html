@@ -1,7 +1,7 @@
-<div class="details">
+<div class="details" ng-controller="DetailsCtrl">
     <header>
         <h2>任务详情</h2>
-        <span class="glyphicon glyphicon-edit"></span>
+        <span class="glyphicon glyphicon-edit" ng-click="editTask()"></span>
     </header>
     <div class="td-container" style="overflow: hidden">
         <div class="form-group my-form-group">
@@ -18,8 +18,8 @@
         <textarea class="form-control" id="details_ctn" ng-readonly="detailsStats" ng-model="nowTask.taskContent"></textarea>
 
         <div class="btn-group">
-            <button type="button" class="btn btn-info cancel" disabled>取消</button>
-            <button type="button" class="btn btn-primary ok" disabled>确定</button>
+            <button type="button" class="btn btn-info cancel">取消</button>
+            <button type="button" class="btn btn-primary ok" ng-click="saveTask()">确定</button>
         </div>
 
     </div>
