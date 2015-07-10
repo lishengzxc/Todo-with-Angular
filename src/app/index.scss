@@ -12,19 +12,151 @@ $icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bo
 // bower:scss
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+html,
+body,
+body > div, {
+  width: 100%;
+  height: 100%;
 }
 
-.thumbnail {
-  height: 200px;
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
 
-  img.pull-right {
-    width: 50px;
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 15px 0;
+  .header {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 15px;
+    font-weight: bold;
+    background-color: #ddd;
   }
+  .task {
+    display: flex;
+    flex-grow: 1;
+    .categories,
+    .tasklist,
+    .taskdetails {
+      position: relative;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+    }
+    .categories {
+      width: 300px;
+      border-right: none;
+      .addcategories {
+        position: absolute;
+        border-top: 1px solid #ddd;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 15px;
+        background-color: #eee;
+      }
+      .alltask {
+        border-bottom: 1px solid #ddd;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 15px;
+        cursor: pointer;
+        background-color: #eee;
+      }
+      div {
+        height: 40px;
+        line-height: 40px;
+        padding-left: 15px;
+        cursor: pointer;
+      }
+      .categorieslist {
+        list-style: none;
+        li {
+          height: 35px;
+          line-height: 35px;
+          padding-left: 35px;
+          cursor: pointer;
+        }
+
+      }
+    }
+    .tasklist {
+      width: 300px;
+      .state {
+        border-bottom: 1px solid #ddd;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 5px;
+        background-color: #eee;
+        button {
+          position: relative;
+          top: -1px;
+        }
+      }
+      .sometasklist {
+        list-style: none;
+        li {
+          position: relative;
+          height: 80px;
+          border-bottom: 1px solid #ddd;
+          padding: 15px;
+          .taskname {
+            font-size: 16px;
+            font-weight: bold;
+          }
+          .tasktime {
+            margin-top: 10px;
+          }
+          .priority {
+            position: absolute;
+            font-size: 20px;
+            right: 15px;
+            top: 15px;
+            &.high {
+              color: red;
+            }
+            &.middle {
+              color: orange;
+            }
+            &.low {
+              color: green;
+            }
+          }
+        }
+      }
+      .addtask {
+        position: absolute;
+        border-top: 1px solid #ddd;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 15px;
+        cursor: pointer;
+        background-color: #eee;
+        .sort {
+          position: absolute;
+          right: 15px;
+          top: 13px;
+          font-weight: bold;
+        }
+      }
+    }
+    .taskdetails {
+      width: 600px;
+      border-left: none;
+    }
+  }
+
 }
 
 /**
