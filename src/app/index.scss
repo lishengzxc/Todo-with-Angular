@@ -152,8 +152,34 @@ li {
       }
     }
     .taskdetails {
+      position: relative;
       width: 600px;
       border-left: none;
+      .taskdetailsheader {
+        border-bottom: 1px solid #ddd;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 15px;
+        background-color: #eee;
+        font-weight: bold;
+        .edit {
+          position: absolute;
+          right: 15px;
+          top: 13px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+
+      .taskform {
+        padding: 15px;
+        input[type="radio"] {
+          visibility: hidden;
+        }
+        .glyphicon {
+          font-size: 20px;
+        }
+      }
     }
   }
 

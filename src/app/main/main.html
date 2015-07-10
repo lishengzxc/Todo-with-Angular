@@ -35,8 +35,39 @@
           <div class="priority low"><span class="glyphicon glyphicon-flag"></span></div>
         </li>
       </ul>
-      <div class="addtask"><span class="glyphicon glyphicon-plus"></span> <b>添加任务</b> <span class="glyphicon glyphicon-sort sort"></span></div>
+      <div class="addtask"><span class="glyphicon glyphicon-plus"></span> <b>添加任务</b> <span
+        class="glyphicon glyphicon-sort sort"></span></div>
     </div>
-    <div class="taskdetails"></div>
+    <div class="taskdetails">
+      <div class="taskdetailsheader">查看任务<span class="glyphicon glyphicon-edit edit"></span></div>
+      <form class="taskform">
+        <div class="form-group">
+          <label for="taskname">任务名</label>
+          <input type="text" class="form-control" name="taskname" id="taskname">
+          <hr/>
+          <label>优先级</label>
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> <span
+            class="glyphicon glyphicon-flag"></span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> <span
+            class="glyphicon glyphicon-flag"></span>
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> <span
+            class="glyphicon glyphicon-flag"></span>
+          </label>
+          <hr/>
+          <label for="taskname">截止日期</label>
+          <input type="text" class="form-control" name="taskname" id="taskname">
+          <hr/>
+          <label>备注</label>
+          <textarea class="form-control"></textarea>
+        </div>
+    </div>
+
+    </form>
   </div>
+</div>
 </div>
