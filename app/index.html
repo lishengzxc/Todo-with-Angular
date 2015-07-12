@@ -8,10 +8,89 @@
 </head>
 <body>
 <div ng-view="">
-
+    <header>Todo with Angular1.x</header>
+    <main>
+        <section class="catalog-box">
+            <header>所有任务</header>
+            <ul>
+                <li class="catalog-box-item">某个类别</li>
+                <li class="catalog-box-item">某个类别</li>
+                <li class="catalog-box-item">某个类别</li>
+                <li class="catalog-box-item">某个类别</li>
+                <li class="catalog-box-item">某个类别</li>
+            </ul>
+        </section>
+        <section class="list-box">
+            <header>
+                <button type="button" class="btn btn-sm btn-primary" id="all">所有</button>
+                <button type="button" class="btn btn-sm btn-warning" id="will">未完成</button>
+                <button type="button" class="btn btn-sm btn-success" id="done">已完成</button>
+            </header>
+            <ul>
+                <li class="list-box-item">
+                    <div class="list-box-item-name">任务名一</div>
+                    <div class="list-box-item-endtime">2015-7-14</div>
+                    <div class="list-box-item-priority"><span class="glyphicon glyphicon-flag high"></span></div>
+                </li>
+                <li class="list-box-item">
+                    <div class="list-box-item-name">任务名一</div>
+                    <div class="list-box-item-endtime">2015-7-14</div>
+                    <div class="list-box-item-priority"><span class="glyphicon glyphicon-flag middle"></span></div>
+                </li>
+                <li class="list-box-item">
+                    <div class="list-box-item-name">任务名一</div>
+                    <div class="list-box-item-endtime">2015-7-14</div>
+                    <div class="list-box-item-priority"><span class="glyphicon glyphicon-flag low"></span></div>
+                </li>
+                <li class="list-box-item">
+                    <div class="list-box-item-name">任务名一</div>
+                    <div class="list-box-item-endtime">2015-7-14</div>
+                    <div class="list-box-item-priority"><span class="glyphicon glyphicon-flag high"></span></div>
+                </li>
+            </ul>
+        </section>
+        <section class="task-box">
+            <header>查看任务</header>
+            <form>
+                <div class="form-group">
+                    <label for="taskname">任务名</label>
+                    <input type="text" class="form-control" id="taskname" placeholder="">
+                </div>
+                <hr/>
+                <div class="form-group">
+                    <label>优先级</label>
+                    <label class="radio-inline">
+                        <input type="radio" name="high" id="inlineRadio1" value="option1"> <span
+                            class="glyphicon glyphicon-flag high"></span>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="middle" id="inlineRadio2" value="option2"> <span
+                            class="glyphicon glyphicon-flag high"></span>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="low" id="inlineRadio3" value="option3"> <span
+                            class="glyphicon glyphicon-flag high"></span>
+                    </label>
+                </div>
+                <hr/>
+                <div class="form-group">
+                    <label for="taskendtime">结束时间</label>
+                    <input type="text" class="form-control" id="taskendtime" placeholder="">
+                </div>
+                <hr/>
+                <div class="form-group">
+                    <label for="taskcontent">任务内容</label>
+                    <textarea class="form-control" id="taskcontent"></textarea>
+                </div>
+                <button type="button" class="btn">修改</button>
+                <button type="button" class="btn btn-primary">确认</button>
+            </form>
+        </section>
+    </main>
 </div>
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular-route/angular-route.js"></script>
 <script src="js/app.js"></script>
+<script src="js/controllers/MainController.js"></script>
 </body>
 </html>
