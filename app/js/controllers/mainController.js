@@ -7,4 +7,6 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 	$scope.taskFilter = {};
 
 	$scope.orderBy = 'priority';
+
+	$scope.taskReadOnly = true;
 }]);

@@ -3,35 +3,35 @@
 	<form>
 		<div class="form-group">
 			<label for="taskname">任务名</label>
-			<input type="text" class="form-control" id="taskname" placeholder="">
+			<input type="text" class="form-control" id="taskname" placeholder="" ng-readonly="taskReadOnly">
 		</div>
 		<hr/>
 		<div class="form-group">
 			<label>优先级</label>
 			<label class="radio-inline">
-				<input type="radio" name="high" id="inlineRadio1" value="option1"> <span
+				<input type="radio" name="priority" id="high" value="0" ng-disabled="taskReadOnly"> <span
 				class="glyphicon glyphicon-flag high"></span>
 			</label>
 			<label class="radio-inline">
-				<input type="radio" name="middle" id="inlineRadio2" value="option2"> <span
+				<input type="radio" name="priority" id="middle" value="1" ng-disabled="taskReadOnly"> <span
 				class="glyphicon glyphicon-flag high"></span>
 			</label>
 			<label class="radio-inline">
-				<input type="radio" name="low" id="inlineRadio3" value="option3"> <span
+				<input type="radio" name="priority" id="low" value="2" ng-disabled="taskReadOnly"> <span
 				class="glyphicon glyphicon-flag high"></span>
 			</label>
 		</div>
 		<hr/>
 		<div class="form-group">
 			<label for="taskendtime">结束时间</label>
-			<input type="text" class="form-control" id="taskendtime" placeholder="">
+			<input type="text" class="form-control" id="taskendtime" placeholder="" ng-readonly="taskReadOnly">
 		</div>
 		<hr/>
 		<div class="form-group">
 			<label for="taskcontent">任务内容</label>
-			<textarea class="form-control" id="taskcontent"></textarea>
+			<textarea class="form-control" id="taskcontent" ng-readonly="taskReadOnly"></textarea>
 		</div>
-		<button type="button" class="btn">修改</button>
-		<button type="button" class="btn btn-primary">确认</button>
+		<button type="button" class="btn" ng-disabled="taskReadOnly">修改</button>
+		<button type="button" class="btn btn-primary" ng-disabled="taskReadOnly">确认</button>
 	</form>
 </section>
