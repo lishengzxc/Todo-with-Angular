@@ -19,9 +19,12 @@ todo.controller('TaskController', ['$scope', 'categoryListService', 'taskListSer
 		}
 	};
 	$scope.sortBoxDisplay = false;
+
+
+
 	$scope.sort = function ($event) {
 		$scope.sortBoxDisplay = !$scope.sortBoxDisplay;
-		//$event.stopPropagation();
+		$event.stopPropagation();
 		//if ($scope.orderBy[0] === 'p') {
 		//	$scope.orderBy = '-priority';
 		//} else {
