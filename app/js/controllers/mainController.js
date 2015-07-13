@@ -3,4 +3,6 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 	$scope.categoryList = categoryListService.getAllCategoryList();
 	$scope.taskList = taskListService.getAllTaskList();
 
+	$scope.nowCategoryId = -1;
+
 }]);

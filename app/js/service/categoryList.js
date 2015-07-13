@@ -5,20 +5,43 @@ todo.factory('categoryListService', function () {
 	var service = {};
 
 	service.getAllCategoryList = function () {
-		return JSON.parse(localStorage.getItem('categoryList'));
+		var _list = localStorage.getItem('categoryList') ? localStorage.getItem('categoryList') : '[]';
+		return JSON.parse(_list);
 	};
 
 	service.addCategory = function (name, allCategoryList) {
-
+		var id;
+		if (allCategoryList.length !== 0) {
+			id = allCategoryList[allCategoryList.length - 1].id + 1;
+			allCategoryList.push({
+				id: id,
+				name: name
+			})
+		} else {
+			allCategoryList.push({
+				id: 0,
+				name: name
+			})
+		}
+		service.save(allCategoryList);
 	};
 
-	service.delCatogory = function (id, allCategoryList) {
-
+	service.delCategory = function (id, allCategoryList) {
+		for (var i = 0, len = allCategoryList.length; i < len; i++) {
+			if (allCategoryList[i].id === id) {
+				if (confirm("是否删除【" + allCategoryList[i].name + "】下的所有任务？")) {
+					allCategoryList.splice(i, 1);
+				}
+				break;
+			}
+		}
+		service.save(allCategoryList);
 	};
 
 
 	service.save = function (allCategoryList) {
-		localStorage.setItem('categoryList', JSON.parse(allCategoryList));
+		localStorage.setItem("categoryList", JSON.stringify(allCategoryList));
+
 	};
 
 	return service;

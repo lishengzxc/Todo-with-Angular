@@ -9,7 +9,6 @@ html, body {
 	height: 100%;
 }
 
-
 body {
 	font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
 	background-color: #eeeeee;
@@ -31,12 +30,43 @@ body {
 		main {
 			display: flex;
 			flex-grow: 1;
-			.catalog-box,
+			.category-box,
 			.list-box {
+				position: relative;
 				flex-basis: 320px;
 				box-sizing: border-box;
 				border-left: 1px solid #cccccc;
 				border-bottom: 1px solid #cccccc;
+				.category-box-addbtn,
+				.list-box-addbtn {
+					position: absolute;
+					height: 50px;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					padding-left: 15px;
+					line-height: 50px;
+					border-top: 1px solid #cccccc;
+					background: #eeeeee;
+					cursor: pointer;
+				}
+				.category-box-addbox {
+					padding: 0 15px;
+					position: relative;
+					border-bottom: 1px solid #cccccc;
+					height: 50px;
+					line-height: 50px;
+					input[type="text"] {
+						position: absolute;
+						top: 8px;
+						width: 220px;
+					}
+					input[type="submit"] {
+						position: absolute;
+						top: 8px;
+						right: 15px;
+					}
+				}
 				ul {
 					li {
 						position: relative;
@@ -44,12 +74,31 @@ body {
 						border-bottom: 1px solid #cccccc;
 						cursor: pointer;
 						&:hover {
+							.del {
+								display: block;
+							}
 							background-color: #E7E7E7;
 						}
 					}
-					.catalog-box-item {
+					.category-box-item {
+						position: relative;
 						height: 50px;
 						line-height: 50px;
+						.del {
+							position: absolute;
+							top: 15px;
+							right: 15px;
+							display: none;
+							width: 20px;
+							height: 20px;
+							line-height: 16px;
+							text-align: center;
+							border-radius: 50%;
+							font-weight: bold;
+							color: #ffffff;
+							background: #cbcbcb;
+
+						}
 					}
 					.list-box-item {
 						height: 80px;
@@ -85,7 +134,7 @@ body {
 				border-bottom: 1px solid #cccccc;
 				border-right: 1px solid #cccccc;
 			}
-			.catalog-box,
+			.category-box,
 			.list-box,
 			.task-box {
 				background-color: #ffffff;
