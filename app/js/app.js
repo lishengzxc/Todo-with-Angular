@@ -1,9 +1,9 @@
-var todo = angular.module('todo', ['ngRoute'])
+var todo = angular.module('toDo', ['ngRoute'])
 	.config(function ($routeProvider) {
 		$routeProvider
 			.when('/', {
 				templateUrl: 'tpl/main.html',
-				controller: 'mainController'
+				controller: 'MainController'
 			})
 			.otherwise({
 				redirectTo: '/'
