@@ -7,7 +7,7 @@
 	<ul>
 		<li class="list-box-item" ng-repeat="item in taskList | filter: taskFilter | orderBy:orderBy track by $index">
 			<div class="list-box-item-name">{{item.name}}</div>
-			<div class="list-box-item-endtime">{{item.endTime}}</div>
+			<div class="list-box-item-endtime">{{item.startTime + " - " + item.endTime}}</div>
 			<div class="list-box-item-priority"><span class="glyphicon glyphicon-flag"
 			                                          ng-class="{high: item.priority === 0, middle: item.priority === 1, low: item.priority === 2}"></span>
 			</div>
