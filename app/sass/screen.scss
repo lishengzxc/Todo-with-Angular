@@ -185,6 +185,15 @@ body {
 							span {
 								position: relative;
 								top: 5px;
+								&.high {
+									color: red;
+								}
+								&.middle {
+									color: orange;
+								}
+								&.low {
+									color: green;
+								}
 							}
 						}
 						#taskcontent {

@@ -14,7 +14,7 @@
 		</li>
 
 	</ul>
-	<div class="list-box-addbtn">添加任务 <span class="glyphicon glyphicon-sort" ng-click="sort($event)"></span></div>
+	<div class="list-box-addbtn" ng-click="preAddTask($event)">添加任务 <span class="glyphicon glyphicon-sort" ng-click="sort($event)"></span></div>
 	<div class="list-box-sort-box" ng-show="sortBoxDisplay">
 		<select class="form-control" id="sort-by" ng-model="orderBy.by">
 			<option value="startTime">添加日期</option>

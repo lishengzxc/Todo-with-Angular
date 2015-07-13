@@ -305,7 +305,19 @@ body div[ng-view=""] main .task-box form .form-group .radio-inline span {
   position: relative;
   top: 5px;
 }
-/* line 190, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
+body div[ng-view=""] main .task-box form .form-group .radio-inline span.high {
+  color: red;
+}
+/* line 191, ../sass/screen.scss */
+body div[ng-view=""] main .task-box form .form-group .radio-inline span.middle {
+  color: orange;
+}
+/* line 194, ../sass/screen.scss */
+body div[ng-view=""] main .task-box form .form-group .radio-inline span.low {
+  color: green;
+}
+/* line 199, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group #taskcontent {
   resize: none;
   height: 200px;
