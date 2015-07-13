@@ -1,30 +1,18 @@
-<section class="list-box">
-	<header>
+<section class="list-box" ng-controller="TaskController">
+	<header ng-click="changeTaskStatus($event)">
 		<button type="button" class="btn btn-sm btn-primary" id="all">所有</button>
 		<button type="button" class="btn btn-sm btn-warning" id="will">未完成</button>
 		<button type="button" class="btn btn-sm btn-success" id="done">已完成</button>
 	</header>
 	<ul>
-		<li class="list-box-item">
-			<div class="list-box-item-name">任务名一</div>
-			<div class="list-box-item-endtime">2015-7-14</div>
-			<div class="list-box-item-priority"><span class="glyphicon glyphicon-flag high"></span></div>
+		<li class="list-box-item" ng-repeat="item in taskList | filter: taskFilter | orderBy:orderBy track by $index">
+			<div class="list-box-item-name">{{item.name}}</div>
+			<div class="list-box-item-endtime">{{item.endTime}}</div>
+			<div class="list-box-item-priority"><span class="glyphicon glyphicon-flag"
+			                                          ng-class="{high: item.priority === 0, middle: item.priority === 1, low: item.priority === 2}"></span>
+			</div>
 		</li>
-		<li class="list-box-item">
-			<div class="list-box-item-name">任务名一</div>
-			<div class="list-box-item-endtime">2015-7-14</div>
-			<div class="list-box-item-priority"><span class="glyphicon glyphicon-flag middle"></span></div>
-		</li>
-		<li class="list-box-item">
-			<div class="list-box-item-name">任务名一</div>
-			<div class="list-box-item-endtime">2015-7-14</div>
-			<div class="list-box-item-priority"><span class="glyphicon glyphicon-flag low"></span></div>
-		</li>
-		<li class="list-box-item">
-			<div class="list-box-item-name">任务名一</div>
-			<div class="list-box-item-endtime">2015-7-14</div>
-			<div class="list-box-item-priority"><span class="glyphicon glyphicon-flag high"></span></div>
-		</li>
+
 	</ul>
-	<div class="list-box-addbtn">添加任务</div>
+	<div class="list-box-addbtn">添加任务 <span class="glyphicon glyphicon-sort" ng-click="sort($event)"></span></div>
 </section>

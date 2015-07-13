@@ -3,6 +3,8 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 	$scope.categoryList = categoryListService.getAllCategoryList();
 	$scope.taskList = taskListService.getAllTaskList();
 
-	$scope.nowCategoryId = -1;
 
+	$scope.taskFilter = {};
+
+	$scope.orderBy = 'priority';
 }]);

@@ -125,8 +125,18 @@ body div[ng-view=""] main .list-box .list-box-addbtn {
   border-top: 1px solid #cccccc;
   background: #eeeeee;
   cursor: pointer;
+  -webkit-user-select: none;
 }
 /* line 53, ../sass/screen.scss */
+body div[ng-view=""] main .category-box .category-box-addbtn span,
+body div[ng-view=""] main .category-box .list-box-addbtn span,
+body div[ng-view=""] main .list-box .category-box-addbtn span,
+body div[ng-view=""] main .list-box .list-box-addbtn span {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+}
+/* line 59, ../sass/screen.scss */
 body div[ng-view=""] main .category-box .category-box-addbox,
 body div[ng-view=""] main .list-box .category-box-addbox {
   padding: 0 15px;
@@ -135,21 +145,21 @@ body div[ng-view=""] main .list-box .category-box-addbox {
   height: 50px;
   line-height: 50px;
 }
-/* line 59, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 body div[ng-view=""] main .category-box .category-box-addbox input[type="text"],
 body div[ng-view=""] main .list-box .category-box-addbox input[type="text"] {
   position: absolute;
   top: 8px;
   width: 220px;
 }
-/* line 64, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 body div[ng-view=""] main .category-box .category-box-addbox input[type="submit"],
 body div[ng-view=""] main .list-box .category-box-addbox input[type="submit"] {
   position: absolute;
   top: 8px;
   right: 15px;
 }
-/* line 71, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul li,
 body div[ng-view=""] main .list-box ul li {
   position: relative;
@@ -157,24 +167,24 @@ body div[ng-view=""] main .list-box ul li {
   border-bottom: 1px solid #cccccc;
   cursor: pointer;
 }
-/* line 76, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul li:hover,
 body div[ng-view=""] main .list-box ul li:hover {
   background-color: #E7E7E7;
 }
-/* line 77, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul li:hover .del,
 body div[ng-view=""] main .list-box ul li:hover .del {
   display: block;
 }
-/* line 83, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .category-box-item,
 body div[ng-view=""] main .list-box ul .category-box-item {
   position: relative;
   height: 50px;
   line-height: 50px;
 }
-/* line 87, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .category-box-item .del,
 body div[ng-view=""] main .list-box ul .category-box-item .del {
   position: absolute;
@@ -190,46 +200,46 @@ body div[ng-view=""] main .list-box ul .category-box-item .del {
   color: #ffffff;
   background: #cbcbcb;
 }
-/* line 103, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item,
 body div[ng-view=""] main .list-box ul .list-box-item {
   height: 80px;
 }
-/* line 105, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item .list-box-item-name,
 body div[ng-view=""] main .list-box ul .list-box-item .list-box-item-name {
   position: relative;
   top: 20px;
 }
-/* line 109, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item .list-box-item-endtime,
 body div[ng-view=""] main .list-box ul .list-box-item .list-box-item-endtime {
   position: relative;
   top: 30px;
 }
-/* line 113, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item .glyphicon-flag,
 body div[ng-view=""] main .list-box ul .list-box-item .glyphicon-flag {
   position: absolute;
   right: 20px;
   top: 20px;
 }
-/* line 117, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item .glyphicon-flag.high,
 body div[ng-view=""] main .list-box ul .list-box-item .glyphicon-flag.high {
   color: red;
 }
-/* line 120, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item .glyphicon-flag.middle,
 body div[ng-view=""] main .list-box ul .list-box-item .glyphicon-flag.middle {
   color: orange;
 }
-/* line 123, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item .glyphicon-flag.low,
 body div[ng-view=""] main .list-box ul .list-box-item .glyphicon-flag.low {
   color: green;
 }
-/* line 130, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 body div[ng-view=""] main .task-box {
   flex-grow: 1;
   box-sizing: border-box;
@@ -237,13 +247,13 @@ body div[ng-view=""] main .task-box {
   border-bottom: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
 }
-/* line 137, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 body div[ng-view=""] main .category-box,
 body div[ng-view=""] main .list-box,
 body div[ng-view=""] main .task-box {
   background-color: #ffffff;
 }
-/* line 141, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 body div[ng-view=""] main .category-box header,
 body div[ng-view=""] main .list-box header,
 body div[ng-view=""] main .task-box header {
@@ -251,32 +261,32 @@ body div[ng-view=""] main .task-box header {
   line-height: 45px;
   background-color: #dfdfdf;
 }
-/* line 145, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 body div[ng-view=""] main .category-box header button,
 body div[ng-view=""] main .list-box header button,
 body div[ng-view=""] main .task-box header button {
   position: relative;
   top: -1px;
 }
-/* line 152, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form {
   padding: 20px;
 }
-/* line 155, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group label {
   margin-bottom: 10px;
 }
-/* line 159, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group .radio-inline {
   position: relative;
   left: 320px;
 }
-/* line 164, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group .radio-inline span {
   position: relative;
   top: 5px;
 }
-/* line 169, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group #taskcontent {
   resize: none;
   height: 200px;
