@@ -12,21 +12,22 @@ todo.controller('mainController', ['$scope', function ($scope) {
 	//	isDone: false
 	//}
 
-	function Category(name) {
+	//function Category(name) {
+	//
+	//	this.name = name;
+	//}
+	//
+	//
+	//
+	//
+	//
+	//function Task(name, content, categoryId, endTime, priority) {
+	//
+	//	this.name = name;
+	//	this.content = content;
+	//	this.categoryId = categoryId;
+	//	this.endTime = endTime;
+	//	this.priority = priority;
+	//}
 
-		this.name = name;
-	}
-
-
-
-
-
-	function Task(name, content, categoryId, endTime, priority) {
-
-		this.name = name;
-		this.content = content;
-		this.categoryId = categoryId;
-		this.endTime = endTime;
-		this.priority = priority;
-	}
 }]);
