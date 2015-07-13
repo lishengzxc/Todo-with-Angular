@@ -18,14 +18,15 @@ todo.controller('TaskController', ['$scope', 'categoryListService', 'taskListSer
 				break;
 		}
 	};
-
+	$scope.sortBoxDisplay = false;
 	$scope.sort = function ($event) {
-		$event.stopPropagation();
-		if ($scope.orderBy[0] === 'p') {
-			$scope.orderBy = '-priority';
-		} else {
-			$scope.orderBy = 'priority';
-		}
+		$scope.sortBoxDisplay = !$scope.sortBoxDisplay;
+		//$event.stopPropagation();
+		//if ($scope.orderBy[0] === 'p') {
+		//	$scope.orderBy = '-priority';
+		//} else {
+		//	$scope.orderBy = 'priority';
+		//}
 	}
 
 }]);

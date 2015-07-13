@@ -15,4 +15,16 @@
 
 	</ul>
 	<div class="list-box-addbtn">添加任务 <span class="glyphicon glyphicon-sort" ng-click="sort($event)"></span></div>
+	<div class="list-box-sort-box" ng-show="sortBoxDisplay">
+		<select class="form-control" id="sort-by">
+			<option>添加日期</option>
+			<option>标题</option>
+			<option>截止日期</option>
+			<option>优先级</option>
+		</select>
+		<select class="form-control" id="sort-order">
+			<option>升序</option>
+			<option>降序</option>
+		</select>
+	</div>
 </section>

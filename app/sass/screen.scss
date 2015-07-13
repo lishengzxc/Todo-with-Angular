@@ -37,6 +37,20 @@ body {
 				box-sizing: border-box;
 				border-left: 1px solid #cccccc;
 				border-bottom: 1px solid #cccccc;
+				.list-box-sort-box {
+					padding: 10px;
+					position: absolute;
+					right: 0;
+					width: 100%;
+					bottom: 50px;
+					height: 100px;
+					background: #E7E7E7;
+					opacity: 0.7;
+					border-top: 1px solid #cccccc;
+					#sort-by {
+						margin-bottom: 10px;
+					}
+				}
 				.category-box-addbtn,
 				.list-box-addbtn {
 					position: absolute;
@@ -143,6 +157,7 @@ body {
 			.category-box,
 			.list-box,
 			.task-box {
+				position: relative;
 				background-color: #ffffff;
 				header {
 					height: 45px;
