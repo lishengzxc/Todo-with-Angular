@@ -18,6 +18,9 @@ todo.directive('list', function () {
 					$event.target.parentNode.style.backgroundColor = '#e7e7e7';
 				}
 			}, false);
+			//list.addEventListener('dblclick', function ($event) {
+			//	console.log(scope);
+			//})
 		}
 	}
 });

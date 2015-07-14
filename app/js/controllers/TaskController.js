@@ -37,4 +37,6 @@ todo.controller('TaskController', ['$scope', 'categoryListService', 'taskListSer
 		$scope.nowTask.id = this.item.id;
 	}
 
+
+
 }]);
