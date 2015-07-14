@@ -22,11 +22,19 @@ todo.controller('TaskController', ['$scope', 'categoryListService', 'taskListSer
 
 	$scope.preAddTask = function($event) {
 		$scope.taskReadOnly = !$scope.taskReadOnly;
+		for (var i in $scope.nowTask) {
+			delete $scope.nowTask[i];
+		}
 	};
 
 	$scope.sort = function ($event) {
 		$scope.sortBoxDisplay = !$scope.sortBoxDisplay;
 		$event.stopPropagation();
+	};
+
+	$scope.changeNowTaskId = function ($event) {
+		$event.stopPropagation();
+		$scope.nowTask.id = this.item.id;
 	}
 
 }]);

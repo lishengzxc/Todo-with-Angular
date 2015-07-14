@@ -130,6 +130,14 @@ body {
 							position: relative;
 							top: 30px;
 						}
+						&.done {
+							img {
+								position: absolute;
+								height: 80px;
+								top: 0;
+							}
+
+						}
 						.glyphicon-flag {
 							position: absolute;
 							right: 20px;
