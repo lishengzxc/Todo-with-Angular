@@ -25,6 +25,8 @@ todo.controller('TaskListController', ['$scope', 'categoryListService', 'taskLis
 		for (var i in $scope.nowTask) {
 			delete $scope.nowTask[i];
 		}
+		$scope.nowTask.priority = 0;
+		$scope.nowTask.status = false;
 	};
 
 

@@ -6,7 +6,7 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 
 	$scope.taskFilter = {};
 
-	$scope.taskReadOnly = false;
+	$scope.taskReadOnly = true;
 
 	$scope.orderBy = {
 		by: 'startTime',
@@ -14,7 +14,9 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 		isDesc: true
 	};
 
-	$scope.nowTask = {};
+	$scope.nowTask = {
+		priority: 0
+	};
 
 	$scope.$watch('nowTask.id', function () {
 		for (var i = 0; i < $scope.taskList.length; i++) {
@@ -27,7 +29,7 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 				break;
 			}
 		}
-		console.log($scope.nowTask);
+		//console.log($scope.nowTask);
 	});
 
 	$scope.$watch('orderBy', function () {
