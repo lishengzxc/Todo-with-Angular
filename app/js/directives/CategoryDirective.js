@@ -10,9 +10,9 @@ todo.directive('category', function (categoryListService) {
 			var list = element[0].children[2];
 			list.addEventListener('click', function ($event) {
 				for (var i = 0; i < list.children.length; i++) {
-					console.log(list.children[i].style.backgroundColor = 'transparent');
+					list.children[i].style.backgroundColor = 'transparent';
 				}
-				console.log($event.target.style.backgroundColor = '#eee');
+				$event.target.style.backgroundColor = '#eee';
 			}, false);
 		}
 	}

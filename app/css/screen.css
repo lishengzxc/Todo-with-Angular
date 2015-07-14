@@ -188,7 +188,7 @@ body div[ng-view=""] main .list-box ul li {
 /* line 96, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul li:hover,
 body div[ng-view=""] main .list-box ul li:hover {
-  background-color: #E7E7E7;
+  background-color: #eee !important;
 }
 /* line 97, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul li:hover .del,
