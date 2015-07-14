@@ -73,13 +73,18 @@ html, body {
   height: 100%;
 }
 
-/* line 12, ../sass/screen.scss */
+/* line 11, ../sass/screen.scss */
+.ui-datepicker {
+  width: 240px;
+}
+
+/* line 14, ../sass/screen.scss */
 body {
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
   background-color: #eeeeee;
   padding: 15px;
 }
-/* line 16, ../sass/screen.scss */
+/* line 18, ../sass/screen.scss */
 body div[ng-view=""] {
   display: flex;
   flex-direction: column;
@@ -87,7 +92,7 @@ body div[ng-view=""] {
   height: 100%;
   margin: 0 auto;
 }
-/* line 22, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 body div[ng-view=""] header {
   position: relative;
   width: 100%;
@@ -96,12 +101,12 @@ body div[ng-view=""] header {
   padding-left: 15px;
   background-color: #cccccc;
 }
-/* line 30, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 body div[ng-view=""] main {
   display: flex;
   flex-grow: 1;
 }
-/* line 33, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 body div[ng-view=""] main .category-box,
 body div[ng-view=""] main .list-box {
   position: relative;
@@ -110,7 +115,7 @@ body div[ng-view=""] main .list-box {
   border-left: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
 }
-/* line 40, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 body div[ng-view=""] main .category-box .list-box-sort-box,
 body div[ng-view=""] main .list-box .list-box-sort-box {
   padding: 10px;
@@ -123,12 +128,12 @@ body div[ng-view=""] main .list-box .list-box-sort-box {
   opacity: 0.7;
   border-top: 1px solid #cccccc;
 }
-/* line 50, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 body div[ng-view=""] main .category-box .list-box-sort-box #sort-by,
 body div[ng-view=""] main .list-box .list-box-sort-box #sort-by {
   margin-bottom: 10px;
 }
-/* line 54, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 body div[ng-view=""] main .category-box .category-box-addbtn,
 body div[ng-view=""] main .category-box .list-box-addbtn,
 body div[ng-view=""] main .list-box .category-box-addbtn,
@@ -145,7 +150,7 @@ body div[ng-view=""] main .list-box .list-box-addbtn {
   cursor: pointer;
   -webkit-user-select: none;
 }
-/* line 67, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 body div[ng-view=""] main .category-box .category-box-addbtn span,
 body div[ng-view=""] main .category-box .list-box-addbtn span,
 body div[ng-view=""] main .list-box .category-box-addbtn span,
@@ -154,7 +159,7 @@ body div[ng-view=""] main .list-box .list-box-addbtn span {
   top: 18px;
   right: 15px;
 }
-/* line 73, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 body div[ng-view=""] main .category-box .category-box-addbox,
 body div[ng-view=""] main .list-box .category-box-addbox {
   padding: 0 15px;
@@ -163,21 +168,21 @@ body div[ng-view=""] main .list-box .category-box-addbox {
   height: 50px;
   line-height: 50px;
 }
-/* line 79, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 body div[ng-view=""] main .category-box .category-box-addbox input[type="text"],
 body div[ng-view=""] main .list-box .category-box-addbox input[type="text"] {
   position: absolute;
   top: 8px;
   width: 220px;
 }
-/* line 84, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 body div[ng-view=""] main .category-box .category-box-addbox input[type="submit"],
 body div[ng-view=""] main .list-box .category-box-addbox input[type="submit"] {
   position: absolute;
   top: 8px;
   right: 15px;
 }
-/* line 91, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul li,
 body div[ng-view=""] main .list-box ul li {
   position: relative;
@@ -186,24 +191,24 @@ body div[ng-view=""] main .list-box ul li {
   cursor: pointer;
   -webkit-user-select: none;
 }
-/* line 97, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul li:hover,
 body div[ng-view=""] main .list-box ul li:hover {
   background-color: #eee !important;
 }
-/* line 98, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul li:hover .del,
 body div[ng-view=""] main .list-box ul li:hover .del {
   display: block;
 }
-/* line 104, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .category-box-item,
 body div[ng-view=""] main .list-box ul .category-box-item {
   position: relative;
   height: 50px;
   line-height: 50px;
 }
-/* line 108, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .category-box-item .del,
 body div[ng-view=""] main .list-box ul .category-box-item .del {
   position: absolute;
@@ -219,29 +224,29 @@ body div[ng-view=""] main .list-box ul .category-box-item .del {
   color: #ffffff;
   background: #cbcbcb;
 }
-/* line 124, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item,
 body div[ng-view=""] main .list-box ul .list-box-item {
   height: 80px;
 }
-/* line 126, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item .list-box-item-name,
 body div[ng-view=""] main .list-box ul .list-box-item .list-box-item-name {
   position: relative;
   top: 20px;
 }
-/* line 130, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item .list-box-item-endtime,
 body div[ng-view=""] main .list-box ul .list-box-item .list-box-item-endtime {
   position: relative;
   top: 30px;
 }
-/* line 134, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item img,
 body div[ng-view=""] main .list-box ul .list-box-item img {
   display: none;
 }
-/* line 138, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item.done img,
 body div[ng-view=""] main .list-box ul .list-box-item.done img {
   display: block;
@@ -249,29 +254,29 @@ body div[ng-view=""] main .list-box ul .list-box-item.done img {
   height: 80px;
   top: 0;
 }
-/* line 146, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item .glyphicon-flag,
 body div[ng-view=""] main .list-box ul .list-box-item .glyphicon-flag {
   position: absolute;
   right: 20px;
   top: 20px;
 }
-/* line 150, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item .glyphicon-flag.high,
 body div[ng-view=""] main .list-box ul .list-box-item .glyphicon-flag.high {
   color: red;
 }
-/* line 153, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item .glyphicon-flag.middle,
 body div[ng-view=""] main .list-box ul .list-box-item .glyphicon-flag.middle {
   color: orange;
 }
-/* line 156, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 body div[ng-view=""] main .category-box ul .list-box-item .glyphicon-flag.low,
 body div[ng-view=""] main .list-box ul .list-box-item .glyphicon-flag.low {
   color: green;
 }
-/* line 163, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 body div[ng-view=""] main .task-box {
   flex-grow: 1;
   box-sizing: border-box;
@@ -279,14 +284,14 @@ body div[ng-view=""] main .task-box {
   border-bottom: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
 }
-/* line 170, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 body div[ng-view=""] main .category-box,
 body div[ng-view=""] main .list-box,
 body div[ng-view=""] main .task-box {
   position: relative;
   background-color: #ffffff;
 }
-/* line 175, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 body div[ng-view=""] main .category-box header,
 body div[ng-view=""] main .list-box header,
 body div[ng-view=""] main .task-box header {
@@ -294,44 +299,44 @@ body div[ng-view=""] main .task-box header {
   line-height: 45px;
   background-color: #dfdfdf;
 }
-/* line 179, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 body div[ng-view=""] main .category-box header button,
 body div[ng-view=""] main .list-box header button,
 body div[ng-view=""] main .task-box header button {
   position: relative;
   top: -1px;
 }
-/* line 186, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form {
   padding: 20px;
 }
-/* line 189, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group label {
   margin-bottom: 10px;
 }
-/* line 193, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group .radio-inline {
   position: relative;
   left: 320px;
 }
-/* line 198, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group .radio-inline span {
   position: relative;
   top: 5px;
 }
-/* line 201, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group .radio-inline span.high {
   color: red;
 }
-/* line 204, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group .radio-inline span.middle {
   color: orange;
 }
-/* line 207, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group .radio-inline span.low {
   color: green;
 }
-/* line 212, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group #taskcontent {
   resize: none;
   height: 200px;

@@ -11,22 +11,26 @@
 		<div class="form-group">
 			<label>优先级</label>
 			<label class="radio-inline">
-				<input type="radio" name="priority" id="high" value="2" ng-disabled="taskReadOnly" ng-checked="nowTask.priority == 2" ng-model="nowTask.priority"> <span
+				<input type="radio" name="priority" id="high" value="2" ng-disabled="taskReadOnly"
+				       ng-checked="nowTask.priority == 2" ng-model="nowTask.priority"> <span
 				class="glyphicon glyphicon-flag high"></span>
 			</label>
 			<label class="radio-inline">
-				<input type="radio" name="priority" id="middle" value="1" ng-disabled="taskReadOnly" ng-checked="nowTask.priority == 1" ng-model="nowTask.priority"> <span
+				<input type="radio" name="priority" id="middle" value="1" ng-disabled="taskReadOnly"
+				       ng-checked="nowTask.priority == 1" ng-model="nowTask.priority"> <span
 				class="glyphicon glyphicon-flag middle"></span>
 			</label>
 			<label class="radio-inline">
-				<input type="radio" name="priority" id="low" value="0" ng-disabled="taskReadOnly" ng-checked="nowTask.priority == 0" ng-model="nowTask.priority"> <span
+				<input type="radio" name="priority" id="low" value="0" ng-disabled="taskReadOnly"
+				       ng-checked="nowTask.priority == 0" ng-model="nowTask.priority"> <span
 				class="glyphicon glyphicon-flag low"></span>
 			</label>
 		</div>
 		<hr/>
 		<div class="form-group">
 			<label for="taskendtime">结束时间</label>
-			<input type="text" class="form-control" id="taskendtime" placeholder="" ng-readonly="taskReadOnly"
+			<input type="text" class="form-control" id="taskendtime" placeholder="" ng-readonly="taskReadOnly" ui-date
+			       ui-date-format="yy-m-d"
 			       ng-model="nowTask.endTime">
 		</div>
 		<hr/>

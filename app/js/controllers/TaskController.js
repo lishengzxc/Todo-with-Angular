@@ -2,6 +2,7 @@
  * Created by lisheng on 15/7/14.
  */
 todo.controller('TaskController', ['$scope', 'categoryListService', 'taskListService', function ($scope, categoryListService, taskListService) {
+
 	$scope.confirmAddTask = function ($event) {
 		var getNewTaskId = function () {
 			return $scope.taskList[$scope.taskList.length - 1].id + 1;
@@ -28,10 +29,10 @@ todo.controller('TaskController', ['$scope', 'categoryListService', 'taskListSer
 			$scope.nowTask.startTime = _date.getFullYear() + '-' + (_date.getMonth() + 1) + '-' + _date.getDate();
 			$scope.nowTask.categoryId = $scope.nowCategoryId;
 			$scope.nowTask.id = getNewTaskId();
+			$scope.taskList.push(cloneTask());
+		} else {
+			$scope.taskList[$scope.nowTask.id] = cloneTask();
 		}
-
-		$scope.taskList.push(cloneTask());
-		//console.log($scope.nowTask);
 		resetNowTask();
 
 	}

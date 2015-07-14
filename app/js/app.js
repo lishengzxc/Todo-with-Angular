@@ -1,4 +1,4 @@
-var todo = angular.module('toDo', ['ngRoute'])
+var todo = angular.module('toDo', ['ngRoute', 'ui.date'])
 	.config(function ($routeProvider) {
 		$routeProvider
 			.when('/', {
