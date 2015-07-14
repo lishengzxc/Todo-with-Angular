@@ -25,6 +25,7 @@ todo.controller('CategoryController', ['$scope', 'categoryListService', 'taskLis
 	};
 
 	$scope.changeNowCategoryId = function ($event) {
+
 		$scope.taskFilter.categoryId = this.item.id;
 	}
 

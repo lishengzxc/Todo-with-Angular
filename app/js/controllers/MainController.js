@@ -18,6 +18,8 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 		priority: 0
 	};
 
+	$scope.nowCategoryId = -1;
+
 	$scope.$watch('nowTask.id', function () {
 		for (var i = 0; i < $scope.taskList.length; i++) {
 			if ($scope.nowTask.id === $scope.taskList[i].id) {
