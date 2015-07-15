@@ -39,5 +39,7 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 		} else {
 			$scope.orderBy.isDesc = false;
 		}
-	}, true)
+	}, true);
+
+	//$scope.$watch('taskList')
 }]);

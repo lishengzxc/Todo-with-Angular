@@ -284,14 +284,25 @@ body div[ng-view=""] main .task-box {
   border-bottom: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
 }
-/* line 172, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
+body div[ng-view=""] main .task-box .notice {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+/* line 176, ../sass/screen.scss */
+body div[ng-view=""] main .task-box .notice h2 {
+  font-size: 16px;
+}
+/* line 181, ../sass/screen.scss */
 body div[ng-view=""] main .category-box,
 body div[ng-view=""] main .list-box,
 body div[ng-view=""] main .task-box {
   position: relative;
   background-color: #ffffff;
 }
-/* line 177, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 body div[ng-view=""] main .category-box header,
 body div[ng-view=""] main .list-box header,
 body div[ng-view=""] main .task-box header {
@@ -299,44 +310,44 @@ body div[ng-view=""] main .task-box header {
   line-height: 45px;
   background-color: #dfdfdf;
 }
-/* line 181, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 body div[ng-view=""] main .category-box header button,
 body div[ng-view=""] main .list-box header button,
 body div[ng-view=""] main .task-box header button {
   position: relative;
   top: -1px;
 }
-/* line 188, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form {
   padding: 20px;
 }
-/* line 191, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group label {
   margin-bottom: 10px;
 }
-/* line 195, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group .radio-inline {
   position: relative;
   left: 320px;
 }
-/* line 200, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group .radio-inline span {
   position: relative;
   top: 5px;
 }
-/* line 203, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group .radio-inline span.high {
   color: red;
 }
-/* line 206, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group .radio-inline span.middle {
   color: orange;
 }
-/* line 209, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group .radio-inline span.low {
   color: green;
 }
-/* line 214, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 body div[ng-view=""] main .task-box form .form-group #taskcontent {
   resize: none;
   height: 200px;

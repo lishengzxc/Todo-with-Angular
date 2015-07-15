@@ -168,6 +168,15 @@ body {
 				border-left: 1px solid #cccccc;
 				border-bottom: 1px solid #cccccc;
 				border-right: 1px solid #cccccc;
+				.notice {
+					display: flex;
+					height: 200px;
+					align-items: center;
+					justify-content: center;
+					h2 {
+						font-size: 16px;
+					}
+				}
 			}
 			.category-box,
 			.list-box,
