@@ -5,7 +5,7 @@
 		<button type="button" class="btn btn-sm btn-success" id="done">已完成</button>
 	</header>
 	<ul>
-		<li ng-class="{'list-box-item':true,'done':item.status}" ng-dblclick="changeTaskStatus($event)" ng-click="changeNowTaskId($event)" ng-repeat="item in taskList | filter: taskFilter | orderBy:orderBy.by:orderBy.isDesc track by $index">
+		<li ng-class="{'list-box-item':true,'done':item.status}" ng-dblclick="changeTaskStatus($event)" ng-click="changeNowTaskId($event)" ng-repeat="item in nowTaskList | filter: taskFilter | orderBy:orderBy.by:orderBy.isDesc track by $index">
 			<div class="list-box-item-name">{{item.name}}</div>
 			<div class="list-box-item-endtime">{{item.startTime + " - " + item.endTime}}</div>
 			<div class="list-box-item-priority"><span class="glyphicon glyphicon-flag"

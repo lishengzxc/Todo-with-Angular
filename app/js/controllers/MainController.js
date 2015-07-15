@@ -3,6 +3,7 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 	$scope.categoryList = categoryListService.getAllCategoryList();
 	$scope.taskList = taskListService.getAllTaskList();
 
+	$scope.nowTaskList = $scope.taskList;
 
 	$scope.taskFilter = {};
 
@@ -18,19 +19,43 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 		priority: 0
 	};
 
-	$scope.nowCategoryId = -1;
+	$scope.nowCategoryId = -2;
+
+
+	$scope.noticeBoxDisplay = true;
+
+	$scope.$watch('nowCategoryId', function () {
+		if ($scope.nowCategoryId === -2) {
+
+		} else {
+			$scope.nowTaskList = [];
+			for (var i = 0; i < $scope.taskList.length; i++) {
+				if ($scope.taskList[i].categoryId == $scope.nowCategoryId) {
+					$scope.nowTaskList.push($scope.taskList[i]);
+				}
+			}
+			$scope.nowTaskList.length === 0 ? $scope.noticeBoxDisplay = true : $scope.noticeBoxDisplay = false;
+		}
+
+	});
 
 	$scope.$watch('nowTask.id', function () {
-		for (var i = 0; i < $scope.taskList.length; i++) {
-			if ($scope.nowTask.id === $scope.taskList[i].id) {
-				for (var j in $scope.taskList[i]) {
-					if ($scope.taskList[i].hasOwnProperty(j)) {
-						$scope.nowTask[j] = $scope.taskList[i][j];
+		if ($scope.nowTask.id || $scope.nowTask.id === 0) {
+			for (var i = 0; i < $scope.taskList.length; i++) {
+				if ($scope.nowTask.id === $scope.taskList[i].id) {
+					for (var j in $scope.taskList[i]) {
+						if ($scope.taskList[i].hasOwnProperty(j)) {
+							$scope.nowTask[j] = $scope.taskList[i][j];
+						}
 					}
+					break;
 				}
-				break;
 			}
+			$scope.noticeBoxDisplay = false;
+		} else {
+			$scope.noticeBoxDisplay = true;
 		}
+
 	});
 
 	$scope.$watch('orderBy', function () {
@@ -41,5 +66,4 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 		}
 	}, true);
 
-	//$scope.$watch('taskList')
 }]);
