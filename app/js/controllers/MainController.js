@@ -19,7 +19,7 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 		priority: 0
 	};
 
-	$scope.nowCategoryId = -2;
+	$scope.nowCategoryId = -1;
 
 
 	$scope.noticeBoxDisplay = {
@@ -69,6 +69,8 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 	}, true);
 
 	$scope.$watch('orderBy', function () {
+
+
 		if ($scope.orderBy.order === 'desc') {
 			$scope.orderBy.isDesc = true;
 		} else {

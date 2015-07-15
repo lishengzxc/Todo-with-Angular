@@ -11,6 +11,7 @@ todo.controller('TaskController', ['$scope', 'categoryListService', 'taskListSer
         return $scope.taskList[$scope.taskList.length - 1].id + 1;
       }
     };
+
     var resetNowTask = function () {
       for (var i in $scope.nowTask) {
         delete $scope.nowTask[i];

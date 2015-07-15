@@ -6,7 +6,7 @@ todo.factory('categoryListService', function () {
 
 	service.getAllCategoryList = function () {
 		var _list = JSON.parse(localStorage.getItem('categoryList') ? localStorage.getItem('categoryList') : '[{"id":-1, "name":"默认分类"}]');
-		localStorage.setItem("categoryList", JSON.stringify([{id:-1, name:"默认分类"}]));
+		//localStorage.setItem("categoryList", JSON.stringify([{id:-1, name:"默认分类"}]));
 		return _list;
 	};
 
