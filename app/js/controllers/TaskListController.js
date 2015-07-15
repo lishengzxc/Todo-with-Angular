@@ -37,7 +37,7 @@ todo.controller('TaskListController', ['$scope', 'categoryListService', 'taskLis
 	};
 
 	$scope.changeNowTaskId = function ($event) {
-		$event.stopPropagation();
+		//$event.stopPropagation();
 		$scope.nowTask.id = this.item.id;
 	};
 
