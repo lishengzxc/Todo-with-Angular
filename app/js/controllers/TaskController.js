@@ -4,7 +4,7 @@
 todo.controller('TaskController', ['$scope', 'categoryListService', 'taskListService', function ($scope, categoryListService, taskListService) {
 
 	$scope.confirmAddTask = function ($event) {
-		var getNewTaskId = function () {git
+		var getNewTaskId = function () {
 			if (!$scope.taskList.length) {
 				return 0;
 			} else {
