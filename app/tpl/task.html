@@ -1,7 +1,10 @@
-<section class="task-box" ng-controller="TaskController">
+<section class="task-box" ng-controller="TaskController" >
 	<header>查看任务</header>
-
-	<form>
+	<div class="notice">
+		<!-- TODO: 未选择任务时的提示 -->
+		<h2>请选择或添加一个任务:)</h2>
+	</div>
+	<form style="display: none">
 		<div class="form-group">
 			<label for="taskname">任务名</label>
 			<input type="text" class="form-control" id="taskname" placeholder="" ng-readonly="taskReadOnly"

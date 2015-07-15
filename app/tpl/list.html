@@ -1,5 +1,5 @@
 <section class="list-box" ng-controller="TaskListController">
-	<header ng-click="changeTaskStatus($event)">
+	<header ng-click="changeTaskStatusFilter($event)">
 		<button type="button" class="btn btn-sm btn-primary" id="all">所有</button>
 		<button type="button" class="btn btn-sm btn-warning" id="will">未完成</button>
 		<button type="button" class="btn btn-sm btn-success" id="done">已完成</button>
@@ -9,7 +9,7 @@
 			<div class="list-box-item-name">{{item.name}}</div>
 			<div class="list-box-item-endtime">{{item.startTime + " - " + item.endTime}}</div>
 			<div class="list-box-item-priority"><span class="glyphicon glyphicon-flag"
-			                                          ng-class="{high: item.priority === 2, middle: item.priority === 1, low: item.priority === 0}"></span>
+			                                          ng-class="{high: item.priority == 2, middle: item.priority == 1, low: item.priority == 0}"></span>
 			</div>
 			<img class="" src="img/done.png" alt=""/>
 		</li>

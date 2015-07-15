@@ -5,16 +5,16 @@
  * Created by lisheng on 15/7/13.
  */
 todo.controller('TaskListController', ['$scope', 'categoryListService', 'taskListService', function ($scope, categoryListService, taskListService) {
-	$scope.changeTaskStatus = function ($event) {
+	$scope.changeTaskStatusFilter = function ($event) {
 		switch ($event.target.id) {
 			case 'all':
 				delete $scope.taskFilter.status;
 				break;
 			case 'will':
-				$scope.taskFilter.status = 0;
+				$scope.taskFilter.status = false;
 				break;
 			case 'done':
-				$scope.taskFilter.status = 1;
+				$scope.taskFilter.status = true;
 				break;
 		}
 	};

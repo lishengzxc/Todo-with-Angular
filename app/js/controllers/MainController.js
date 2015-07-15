@@ -31,7 +31,6 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 				break;
 			}
 		}
-		//console.log($scope.nowTask);
 	});
 
 	$scope.$watch('orderBy', function () {
