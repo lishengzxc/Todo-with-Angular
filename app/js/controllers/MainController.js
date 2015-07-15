@@ -22,7 +22,16 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 	$scope.nowCategoryId = -2;
 
 
-	$scope.noticeBoxDisplay = true;
+	$scope.noticeBoxDisplay = {
+		byNowTaskList: true,
+		byCategory: true
+	};
+
+
+	$scope.$watch('noticeBoxDisplay', function () {
+		$scope.noticeBoxDisplayStatus = $scope.noticeBoxDisplay.byNowTaskList || $scope.noticeBoxDisplay.byCategory;
+	}, true);
+
 
 	$scope.$watch('nowCategoryId', function () {
 		if ($scope.nowCategoryId === -2) {
@@ -34,10 +43,10 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 					$scope.nowTaskList.push($scope.taskList[i]);
 				}
 			}
-			$scope.nowTaskList.length === 0 ? $scope.noticeBoxDisplay = true : $scope.noticeBoxDisplay = false;
+			$scope.nowTaskList.length === 0 ? $scope.noticeBoxDisplay.byNowTaskList = true : $scope.noticeBoxDisplay.byNowTaskList = false;
 		}
 
-	});
+	}, true);
 
 	$scope.$watch('nowTask.id', function () {
 		if ($scope.nowTask.id || $scope.nowTask.id === 0) {
@@ -51,12 +60,12 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 					break;
 				}
 			}
-			$scope.noticeBoxDisplay = false;
+			$scope.noticeBoxDisplay.byCategory = false;
 		} else {
-			$scope.noticeBoxDisplay = true;
+			$scope.noticeBoxDisplay.byCategory = true;
 		}
 
-	});
+	}, true);
 
 	$scope.$watch('orderBy', function () {
 		if ($scope.orderBy.order === 'desc') {

@@ -21,7 +21,7 @@ todo.controller('TaskListController', ['$scope', 'categoryListService', 'taskLis
 	$scope.sortBoxDisplay = false;
 
 	$scope.preAddTask = function ($event) {
-		$scope.noticeBoxDisplay = false;
+		$scope.noticeBoxDisplayStatus = false;
 		$scope.taskReadOnly = false;
 		for (var i in $scope.nowTask) {
 			delete $scope.nowTask[i];
