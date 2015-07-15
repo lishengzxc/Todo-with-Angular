@@ -1,13 +1,16 @@
 todo.controller('MainController', ['$scope', 'categoryListService', 'taskListService', function ($scope, categoryListService, taskListService) {
 
 	$scope.categoryList = categoryListService.getAllCategoryList();
-	$scope.taskList = taskListService.getAllTaskList();
 
-	$scope.nowTaskList = $scope.taskList;
+	$scope.taskList = taskListService.getAllTaskList();
 
 	$scope.taskFilter = {};
 
 	$scope.taskReadOnly = true;
+
+	$scope.noticeBoxDisplayStatus = false;
+
+	$scope.currentCategoryId = -1;
 
 	$scope.orderBy = {
 		by: 'startTime',
@@ -15,67 +18,25 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 		isDesc: true
 	};
 
-	$scope.nowTask = {
+	$scope.currentTask = {
 		priority: 0
 	};
 
-	$scope.nowCategoryId = -1;
-
-
-	$scope.noticeBoxDisplay = {
-		byNowTaskList: true,
-		byCategory: true
-	};
-
-
-	$scope.noticeBoxDisplayStatus = false;
-
-	//$scope.$watch('noticeBoxDisplay', function () {
-	//	$scope.noticeBoxDisplayStatus = $scope.noticeBoxDisplay.byNowTaskList || $scope.noticeBoxDisplay.byCategory;
-	//}, true);
-
-
-	$scope.$watch('nowCategoryId', function () {
-		if ($scope.nowCategoryId === -2) {
-
-		} else {
-			$scope.nowTaskList = [];
-			for (var i = 0; i < $scope.taskList.length; i++) {
-				if ($scope.taskList[i].categoryId == $scope.nowCategoryId) {
-					$scope.nowTaskList.push($scope.taskList[i]);
-				}
-			}
-			//$scope.nowTaskList.length === 0 ? $scope.noticeBoxDisplay.byNowTaskList = true : $scope.noticeBoxDisplay.byNowTaskList = false;
-		}
-
-	}, true);
-
-	$scope.$watch('nowTask.id', function () {
-		if ($scope.nowTask.id || $scope.nowTask.id === 0) {
-			for (var i = 0; i < $scope.taskList.length; i++) {
-				if ($scope.nowTask.id === $scope.taskList[i].id) {
-					for (var j in $scope.taskList[i]) {
-						if ($scope.taskList[i].hasOwnProperty(j)) {
-							$scope.nowTask[j] = $scope.taskList[i][j];
-						}
+	$scope.$watch('currentTask.id', function () {
+		for (var i = 0; i < $scope.taskList.length; i++) {
+			if ($scope.currentTask.id === $scope.taskList[i].id) {
+				for (var j in $scope.taskList[i]) {
+					if ($scope.taskList[i].hasOwnProperty(j)) {
+						$scope.currentTask[j] = $scope.taskList[i][j];
 					}
-					break;
 				}
+				break;
 			}
-			//$scope.noticeBoxDisplay.byCategory = false;
-		} else {
-			//$scope.noticeBoxDisplay.byCategory = true;
 		}
 	}, true);
 
 	$scope.$watch('orderBy', function () {
-
-
-		if ($scope.orderBy.order === 'desc') {
-			$scope.orderBy.isDesc = true;
-		} else {
-			$scope.orderBy.isDesc = false;
-		}
+		$scope.orderBy.isDesc = $scope.orderBy.order === 'desc';
 	}, true);
 
 }]);

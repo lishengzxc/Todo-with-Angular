@@ -5,228 +5,245 @@
 @import "compass/reset";
 
 html, body {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
-.ui-datepicker {
-	width: 240px;
-}
+
 body {
-	font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
-	background-color: #eeeeee;
-	padding: 15px;
-	div[ng-view=""] {
-		display: flex;
-		flex-direction: column;
-		width: 1200px;
-		height: 100%;
-		margin: 0 auto;
-		header {
-			position: relative;
-			width: 100%;
-			height: 40px;
-			line-height: 40px;
-			padding-left: 15px;
-			background-color: #cccccc;
-		}
-		main {
-			display: flex;
-			flex-grow: 1;
-			.category-box,
-			.list-box {
-				position: relative;
-				flex-basis: 320px;
-				box-sizing: border-box;
-				border-left: 1px solid #cccccc;
-				border-bottom: 1px solid #cccccc;
-				.list-box-sort-box {
-					padding: 10px;
-					position: absolute;
-					right: 0;
-					width: 100%;
-					bottom: 50px;
-					height: 100px;
-					background: #E7E7E7;
-					opacity: 0.7;
-					border-top: 1px solid #cccccc;
-					#sort-by {
-						margin-bottom: 10px;
-					}
-				}
-				.category-box-addbtn,
-				.list-box-addbtn {
-					position: absolute;
-					height: 50px;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					padding-left: 15px;
-					line-height: 50px;
-					border-top: 1px solid #cccccc;
-					background: #eeeeee;
-					cursor: pointer;
-					-webkit-user-select: none;
-					span {
-						position: absolute;
-						top: 18px;
-						right: 15px;
-					}
-				}
-				.category-box-addbox {
-					padding: 0 15px;
-					position: relative;
-					border-bottom: 1px solid #cccccc;
-					height: 50px;
-					line-height: 50px;
-					input[type="text"] {
-						position: absolute;
-						top: 8px;
-						width: 220px;
-					}
-					input[type="submit"] {
-						position: absolute;
-						top: 8px;
-						right: 15px;
-					}
-				}
-				ul {
-					li {
-						position: relative;
-						padding-left: 20px;
-						border-bottom: 1px solid #cccccc;
-						cursor: pointer;
-						-webkit-user-select: none;
-						&:hover {
-							.del {
-								display: block;
-							}
-							background-color: #eee !important;
-						}
-					}
-					.category-box-item {
-						position: relative;
-						height: 50px;
-						line-height: 50px;
-						.del {
-							position: absolute;
-							top: 15px;
-							right: 15px;
-							display: none;
-							width: 20px;
-							height: 20px;
-							line-height: 16px;
-							text-align: center;
-							border-radius: 50%;
-							font-weight: bold;
-							color: #ffffff;
-							background: #cbcbcb;
-
-						}
-					}
-					.list-box-item {
-						height: 80px;
-						.list-box-item-name {
-							position: relative;
-							top: 20px;
-						}
-						.list-box-item-endtime {
-							position: relative;
-							top: 30px;
-						}
-						img {
-							display: none;
-						}
-						&.done {
-							img {
-								display: block;
-								position: absolute;
-								height: 80px;
-								top: 0;
-							}
-
-						}
-						.glyphicon-flag {
-							position: absolute;
-							right: 20px;
-							top: 20px;
-							&.high {
-								color: red;
-							}
-							&.middle {
-								color: orange;
-							}
-							&.low {
-								color: green;
-							}
-						}
-					}
-				}
-			}
-			.task-box {
-				flex-grow: 1;
-				box-sizing: border-box;
-				border-left: 1px solid #cccccc;
-				border-bottom: 1px solid #cccccc;
-				border-right: 1px solid #cccccc;
-				.notice {
-					display: flex;
-					height: 200px;
-					align-items: center;
-					justify-content: center;
-					h2 {
-						font-size: 16px;
-					}
-				}
-			}
-			.category-box,
-			.list-box,
-			.task-box {
-				position: relative;
-				background-color: #ffffff;
-				header {
-					height: 45px;
-					line-height: 45px;
-					background-color: #dfdfdf;
-					button {
-						position: relative;
-						top: -1px;
-					}
-				}
-			}
-			.task-box {
-				form {
-					padding: 20px;
-					.form-group {
-						label {
-							margin-bottom: 10px;
-
-						}
-						.radio-inline {
-							position: relative;
-							left: 320px;
-							input[type="radio"] {
-							}
-							span {
-								position: relative;
-								top: 5px;
-								&.high {
-									color: red;
-								}
-								&.middle {
-									color: orange;
-								}
-								&.low {
-									color: green;
-								}
-							}
-						}
-						.taskcontent {
-							resize: none;
-							height: 200px;
-						}
-					}
-				}
-			}
-		}
-	}
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+  padding: 15px;
 }
+
+div[ng-view=""] {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  background-color: #cccccc;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+}
+
+.categorybox,
+.listbox,
+.taskbox {
+  header {
+    height: 45px;
+    line-height: 45px;
+    background-color: #dfdfdf;
+    button {
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+.categorybox,
+.listbox {
+  position: relative;
+  flex-basis: 320px;
+  box-sizing: border-box;
+  border-left: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  
+  .categorybox-addbutton,
+  .listbox-addbutton {
+    position: absolute;
+    height: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 15px;
+    line-height: 50px;
+    border-top: 1px solid #cccccc;
+    background: #eeeeee;
+    cursor: pointer;
+    -webkit-user-select: none;
+    span {
+      position: absolute;
+      top: 18px;
+      right: 15px;
+    }
+  }
+  
+  ul {
+    li {
+      position: relative;
+      padding-left: 20px;
+      border-bottom: 1px solid #cccccc;
+      cursor: pointer;
+      -webkit-user-select: none;
+      &:hover {
+        .del {
+          display: block;
+        }
+        background-color: #eee !important;
+      }
+    }
+  }
+}
+
+.taskbox {
+  flex-grow: 1;
+  box-sizing: border-box;
+  border-left: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  .notice {
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      font-size: 16px;
+    }
+  }
+  form {
+    padding: 20px;
+    .form-group {
+      label {
+        margin-bottom: 10px;
+      }
+      .radio-inline {
+        position: relative;
+        left: 320px;
+        input[type="radio"] {
+        }
+        span {
+          position: relative;
+          top: 5px;
+          &.high {
+            color: red;
+          }
+          &.middle {
+            color: orange;
+          }
+          &.low {
+            color: green;
+          }
+        }
+      }
+      .taskcontent {
+        resize: none;
+        height: 200px;
+      }
+    }
+  }
+}
+
+.categorybox {
+  .categorybox-addbox {
+    padding: 0 15px;
+    position: relative;
+    border-bottom: 1px solid #cccccc;
+    height: 50px;
+    line-height: 50px;
+    input[type="text"] {
+      position: absolute;
+      top: 8px;
+      width: 220px;
+    }
+    input[type="submit"] {
+      position: absolute;
+      top: 8px;
+      right: 15px;
+    }
+  }
+  .categorybox-item {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    .del {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: none;
+      width: 20px;
+      height: 20px;
+      line-height: 16px;
+      text-align: center;
+      border-radius: 50%;
+      font-weight: bold;
+      color: #ffffff;
+      background: #cbcbcb;
+      
+    }
+  }
+}
+
+.listbox {
+  .listbox-item {
+    height: 80px;
+    .listbox-item-name {
+      position: relative;
+      top: 20px;
+    }
+    .listbox-item-endtime {
+      position: relative;
+      top: 30px;
+    }
+    img {
+      display: none;
+    }
+    &.done {
+      img {
+        display: block;
+        position: absolute;
+        height: 80px;
+        top: 0;
+      }
+      
+    }
+    .glyphicon-flag {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      &.high {
+        color: red;
+      }
+      &.middle {
+        color: orange;
+      }
+      &.low {
+        color: green;
+      }
+    }
+  }
+  .listbox-sortbox {
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    bottom: 50px;
+    height: 100px;
+    background: #E7E7E7;
+    opacity: 0.7;
+    border-top: 1px solid #cccccc;
+    .sort-by {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.ui-datepicker {
+  width: 240px;
+}
+
+
+
+
+
+
+

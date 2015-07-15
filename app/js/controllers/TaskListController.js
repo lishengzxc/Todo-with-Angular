@@ -5,8 +5,8 @@
  * Created by lisheng on 15/7/13.
  */
 todo.controller('TaskListController', ['$scope', 'categoryListService', 'taskListService', function ($scope, categoryListService, taskListService) {
-	$scope.changeTaskStatusFilter = function ($event) {
-		switch ($event.target.id) {
+	$scope.changeTaskStatusFilter = function (status) {
+		switch (status) {
 			case 'all':
 				delete $scope.taskFilter.status;
 				break;
@@ -20,25 +20,21 @@ todo.controller('TaskListController', ['$scope', 'categoryListService', 'taskLis
 	};
 	$scope.sortBoxDisplay = false;
 
-	$scope.preAddTask = function ($event) {
+	$scope.ready2AddTask = function ($event) {
 		$scope.noticeBoxDisplayStatus = false;
 		$scope.taskReadOnly = false;
-		for (var i in $scope.nowTask) {
-			delete $scope.nowTask[i];
-		}
-		$scope.nowTask.priority = 0;
-		$scope.nowTask.status = false;
+		$scope.currentTask = {};
+		$scope.currentTask.priority = 0;
+		$scope.currentTask.status = false;
 	};
-
 
 	$scope.sort = function ($event) {
 		$scope.sortBoxDisplay = !$scope.sortBoxDisplay;
 		$event.stopPropagation();
 	};
 
-	$scope.changeNowTaskId = function ($event) {
-		//$event.stopPropagation();
-		$scope.nowTask.id = this.item.id;
+	$scope.changeCurrentTaskId = function ($event) {
+		$scope.currentTask.id = this.item.id;
 	};
 
 	$scope.changeTaskStatus = function ($event) {

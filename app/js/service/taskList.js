@@ -9,7 +9,6 @@ todo.factory('taskListService', function () {
 		return _list;
 	};
 
-
 	service.save = function (allTaskList) {
 		localStorage.setItem("taskList", JSON.stringify(allTaskList));
 	};

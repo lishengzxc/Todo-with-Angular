@@ -1,4 +1,4 @@
-<section class="task-box" ng-controller="TaskController">
+<section class="taskbox" ng-controller="TaskController">
 	<header>查看任务</header>
 	<div class="notice" ng-show="noticeBoxDisplayStatus">
 		<h2>请选择或添加一个任务:)</h2>
@@ -7,24 +7,24 @@
 		<div class="form-group">
 			<label for="taskname">任务名</label>
 			<input type="text" class="form-control" id="taskname" placeholder="" ng-readonly="taskReadOnly"
-			       ng-model="nowTask.name">
+			       ng-model="currentTask.name">
 		</div>
 		<hr/>
 		<div class="form-group">
 			<label>优先级</label>
 			<label class="radio-inline">
 				<input type="radio" name="priority" id="high" value="2" ng-disabled="taskReadOnly"
-				       ng-checked="nowTask.priority == 2" ng-model="nowTask.priority"> <span
+				       ng-checked="nowTask.priority == 2" ng-model="currentTask.priority"> <span
 				class="glyphicon glyphicon-flag high"></span>
 			</label>
 			<label class="radio-inline">
 				<input type="radio" name="priority" id="middle" value="1" ng-disabled="taskReadOnly"
-				       ng-checked="nowTask.priority == 1" ng-model="nowTask.priority"> <span
+				       ng-checked="nowTask.priority == 1" ng-model="currentTask.priority"> <span
 				class="glyphicon glyphicon-flag middle"></span>
 			</label>
 			<label class="radio-inline">
 				<input type="radio" name="priority" id="low" value="0" ng-disabled="taskReadOnly"
-				       ng-checked="nowTask.priority == 0" ng-model="nowTask.priority"> <span
+				       ng-checked="nowTask.priority == 0" ng-model="currentTask.priority"> <span
 				class="glyphicon glyphicon-flag low"></span>
 			</label>
 		</div>
@@ -33,12 +33,12 @@
 			<label for="taskendtime">结束时间</label>
 			<input type="text" class="form-control" id="taskendtime" placeholder="" ng-readonly="taskReadOnly" ui-date
 			       ui-date-format="yy-m-d"
-			       ng-model="nowTask.endTime">
+			       ng-model="currentTask.endTime">
 		</div>
 		<hr/>
 		<div class="form-group">
 			<label for="taskcontent">任务内容</label>
-			<textarea class="form-control taskcontent" id="taskcontent" ng-readonly="taskReadOnly" ng-model="nowTask.content"></textarea>
+			<textarea class="form-control taskcontent" id="taskcontent" ng-readonly="taskReadOnly" ng-model="currentTask.content"></textarea>
 		</div>
 		<button type="button" class="btn" ng-disabled="!taskReadOnly">修改</button>
 		<button type="button" class="btn btn-primary" ng-disabled="" ng-click="confirmAddTask($event)">确认</button>

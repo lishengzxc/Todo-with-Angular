@@ -13,32 +13,30 @@ todo.controller('TaskController', ['$scope', 'categoryListService', 'taskListSer
     };
 
     var resetNowTask = function () {
-      for (var i in $scope.nowTask) {
-        delete $scope.nowTask[i];
+      for (var i in $scope.currentTask) {
+        delete $scope.currentTask[i];
       }
-      $scope.nowTask.priority = 0;
+      $scope.currentTask.priority = 0;
     };
 
     var cloneTask = function () {
       var obj = {};
-      for (var i in $scope.nowTask) {
-        if ($scope.nowTask.hasOwnProperty(i)) {
-          obj[i] = $scope.nowTask[i];
+      for (var i in $scope.currentTask) {
+        if ($scope.currentTask.hasOwnProperty(i)) {
+          obj[i] = $scope.currentTask[i];
         }
       }
       return obj;
     };
 
-    if (!$scope.nowTask.id) {
-      var _date = new Date();
-      $scope.nowTask.startTime = _date.getFullYear() + '-' + (_date.getMonth() + 1) + '-' + _date.getDate();
-      $scope.nowTask.categoryId = $scope.nowCategoryId;
-      $scope.nowTask.id = getNewTaskId();
+    if (!$scope.currentTask.id) {
+      var date = new Date();
+      $scope.currentTask.startTime = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+      $scope.currentTask.categoryId = $scope.currentCategoryId;
+      $scope.currentTask.id = getNewTaskId();
       $scope.taskList.push(cloneTask());
-      //$scope.nowTaskList.push(cloneTask());
     } else {
-      $scope.taskList[$scope.nowTask.id] = cloneTask();
-      //$scope.nowTaskList[$scope.nowTask.id] = cloneTask();
+      $scope.taskList[$scope.currentTask.id] = cloneTask();
     }
     taskListService.save($scope.taskList);
     resetNowTask();
