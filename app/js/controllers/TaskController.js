@@ -4,8 +4,12 @@
 todo.controller('TaskController', ['$scope', 'categoryListService', 'taskListService', function ($scope, categoryListService, taskListService) {
 
 	$scope.confirmAddTask = function ($event) {
-		var getNewTaskId = function () {
-			return $scope.taskList[$scope.taskList.length - 1].id + 1;
+		var getNewTaskId = function () {git
+			if (!$scope.taskList.length) {
+				return 0;
+			} else {
+				return $scope.taskList[$scope.taskList.length - 1].id + 1;
+			}
 		};
 		var resetNowTask = function () {
 			for (var i in $scope.nowTask) {
@@ -30,9 +34,12 @@ todo.controller('TaskController', ['$scope', 'categoryListService', 'taskListSer
 			$scope.nowTask.categoryId = $scope.nowCategoryId;
 			$scope.nowTask.id = getNewTaskId();
 			$scope.taskList.push(cloneTask());
+			//$scope.nowTaskList.push(cloneTask());
 		} else {
 			$scope.taskList[$scope.nowTask.id] = cloneTask();
+			//$scope.nowTaskList[$scope.nowTask.id] = cloneTask();
 		}
+		taskListService.save($scope.taskList);
 		resetNowTask();
 
 	}

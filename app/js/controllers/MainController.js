@@ -28,9 +28,11 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 	};
 
 
-	$scope.$watch('noticeBoxDisplay', function () {
-		$scope.noticeBoxDisplayStatus = $scope.noticeBoxDisplay.byNowTaskList || $scope.noticeBoxDisplay.byCategory;
-	}, true);
+	$scope.noticeBoxDisplayStatus = false;
+
+	//$scope.$watch('noticeBoxDisplay', function () {
+	//	$scope.noticeBoxDisplayStatus = $scope.noticeBoxDisplay.byNowTaskList || $scope.noticeBoxDisplay.byCategory;
+	//}, true);
 
 
 	$scope.$watch('nowCategoryId', function () {
@@ -43,7 +45,7 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 					$scope.nowTaskList.push($scope.taskList[i]);
 				}
 			}
-			$scope.nowTaskList.length === 0 ? $scope.noticeBoxDisplay.byNowTaskList = true : $scope.noticeBoxDisplay.byNowTaskList = false;
+			//$scope.nowTaskList.length === 0 ? $scope.noticeBoxDisplay.byNowTaskList = true : $scope.noticeBoxDisplay.byNowTaskList = false;
 		}
 
 	}, true);
@@ -60,11 +62,10 @@ todo.controller('MainController', ['$scope', 'categoryListService', 'taskListSer
 					break;
 				}
 			}
-			$scope.noticeBoxDisplay.byCategory = false;
+			//$scope.noticeBoxDisplay.byCategory = false;
 		} else {
-			$scope.noticeBoxDisplay.byCategory = true;
+			//$scope.noticeBoxDisplay.byCategory = true;
 		}
-
 	}, true);
 
 	$scope.$watch('orderBy', function () {

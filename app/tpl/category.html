@@ -8,8 +8,9 @@
 		</form>
 	</div>
 	<ul>
-		<li class="category-box-item" ng-repeat="item in categoryList track by $index" ng-click="changeNowCategoryId($event)">{{item.name}} <span class="del"
-		                                                                                                   ng-click="delCategory($event)">×</span>
+		<!--<li class="category-box-item" ng-repeat="item in categoryList track by $index" ng-click="changeNowCategoryId($event)">{{item.name}} <span class="del"-->
+		                                                                                                   <!--ng-click="delCategory($event)">×</span>-->
+		<li class="category-box-item" ng-repeat="item in categoryList track by $index" ng-click="changeNowCategoryId($event)">{{item.name}} <span class="del">×</span>
 		</li>
 	</ul>
 	<div class="category-box-addbtn" ng-click="showAddBox($event)">添加类别</div>
