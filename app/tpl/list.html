@@ -1,31 +1,36 @@
 <section class="listbox" ng-controller="TaskListController">
-	<header ng-show="taskList">
-		<button type="button" class="btn btn-sm btn-primary" id="all" ng-click="changeTaskStatusFilter('all')">所有</button>
-		<button type="button" class="btn btn-sm btn-warning" id="will" ng-click="changeTaskStatusFilter('will')">未完成</button>
-		<button type="button" class="btn btn-sm btn-success" id="done" ng-click="changeTaskStatusFilter('done')">已完成</button>
-	</header>
-	<ul>
-		<li ng-class="{'listbox-item':true,'done':item.status}" ng-dblclick="changeTaskStatus($event)" ng-click="changeCurrentTaskId($event)" ng-repeat="item in taskList | filter: taskFilter | orderBy:orderBy.by:orderBy.isDesc track by $index">
-			<div class="listbox-item-name">{{item.name}}</div>
-			<div class="listbox-item-endtime">{{item.startTime + " - " + item.endTime}}</div>
-			<div class="listbox-item-priority"><span class="glyphicon glyphicon-flag"
-			                                          ng-class="{high: item.priority == 2, middle: item.priority == 1, low: item.priority == 0}"></span>
-			</div>
-			<img class="" src="img/done.png" alt=""/>
-		</li>
+  <header ng-show="taskList">
+    <button type="button" class="btn btn-sm btn-primary" id="all" ng-click="changeTaskStatusFilter('all')">所有</button>
+    <button type="button" class="btn btn-sm btn-warning" id="will" ng-click="changeTaskStatusFilter('will')">未完成
+    </button>
+    <button type="button" class="btn btn-sm btn-success" id="done" ng-click="changeTaskStatusFilter('done')">已完成
+    </button>
+  </header>
+  <ul>
+    <li ng-class="{'listbox-item':true,'done':item.status}" ng-dblclick="changeTaskStatus($event)"
+        ng-click="changeCurrentTaskId($event)"
+        ng-repeat="item in taskList | filter: taskFilter | orderBy:orderBy.by:orderBy.isDesc track by $index">
+      <div class="listbox-item-name">{{item.name}}</div>
+      <div class="listbox-item-endtime">{{item.startTime + " - " + item.endTime}}</div>
+      <div class="listbox-item-priority"><span class="glyphicon glyphicon-flag"
+                                               ng-class="{high: item.priority == 2, middle: item.priority == 1, low: item.priority == 0}"></span>
+      </div>
+      <img class="" src="img/done.png" alt=""/>
+    </li>
 
-	</ul>
-	<div class="listbox-addbutton" ng-click="ready2AddTask($event)">添加任务 <span class="glyphicon glyphicon-sort" ng-click="sort($event)"></span></div>
-	<div class="listbox-sortbox" ng-show="sortBoxDisplay">
-		<select class="form-control sort-by" ng-model="orderBy.by">
-			<option value="startTime">添加日期</option>
-			<option value="name">标题</option>
-			<option value="endTime">截止日期</option>
-			<option value="priority">优先级</option>
-		</select>
-		<select class="form-control" id="sort-order" ng-model="orderBy.order">
-			<option value="asc">升序</option>
-			<option value="desc">降序</option>
-		</select>
-	</div>
+  </ul>
+  <div class="listbox-addbutton" ng-click="ready2AddTask($event)">添加任务 <span class="glyphicon glyphicon-sort"
+                                                                             ng-click="sort($event)"></span></div>
+  <div class="listbox-sortbox" ng-show="sortBoxDisplay">
+    <select class="form-control sort-by" ng-model="orderBy.by">
+      <option value="startTime">添加日期</option>
+      <option value="name">标题</option>
+      <option value="endTime">截止日期</option>
+      <option value="priority">优先级</option>
+    </select>
+    <select class="form-control" id="sort-order" ng-model="orderBy.order">
+      <option value="asc">升序</option>
+      <option value="desc">降序</option>
+    </select>
+  </div>
 </section>
