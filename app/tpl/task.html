@@ -38,7 +38,7 @@
 		<hr/>
 		<div class="form-group">
 			<label for="taskcontent">任务内容</label>
-			<textarea class="form-control" id="taskcontent" ng-readonly="taskReadOnly" ng-model="nowTask.content"></textarea>
+			<textarea class="form-control taskcontent" id="taskcontent" ng-readonly="taskReadOnly" ng-model="nowTask.content"></textarea>
 		</div>
 		<button type="button" class="btn" ng-disabled="!taskReadOnly">修改</button>
 		<button type="button" class="btn btn-primary" ng-disabled="" ng-click="confirmAddTask($event)">确认</button>
