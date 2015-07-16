@@ -50,6 +50,29 @@ main {
   }
 }
 
+
+
+.categorybox-addbutton,
+.listbox-addbutton {
+  position: absolute;
+  height: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 15px;
+  line-height: 50px;
+  border-top: 1px solid #cccccc;
+  background: #eeeeee;
+  cursor: pointer;
+  -webkit-user-select: none;
+  span {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+  }
+}
+
+
 .categorybox,
 .listbox {
   position: relative;
@@ -58,25 +81,7 @@ main {
   border-left: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
   
-  .categorybox-addbutton,
-  .listbox-addbutton {
-    position: absolute;
-    height: 50px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding-left: 15px;
-    line-height: 50px;
-    border-top: 1px solid #cccccc;
-    background: #eeeeee;
-    cursor: pointer;
-    -webkit-user-select: none;
-    span {
-      position: absolute;
-      top: 18px;
-      right: 15px;
-    }
-  }
+
   
   ul {
     li {
@@ -143,97 +148,96 @@ main {
   }
 }
 
-.categorybox {
-  .categorybox-addbox {
-    padding: 0 15px;
-    position: relative;
-    border-bottom: 1px solid #cccccc;
-    height: 50px;
-    line-height: 50px;
-    input[type="text"] {
-      position: absolute;
-      top: 8px;
-      width: 220px;
-    }
-    input[type="submit"] {
-      position: absolute;
-      top: 8px;
-      right: 15px;
-    }
+.categorybox-addbox {
+  padding: 0 15px;
+  position: relative;
+  border-bottom: 1px solid #cccccc;
+  height: 50px;
+  line-height: 50px;
+  input[type="text"] {
+    position: absolute;
+    top: 8px;
+    width: 220px;
   }
-  .categorybox-item {
+  input[type="submit"] {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+  }
+}
+.categorybox-item {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  .del {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: none;
+    width: 20px;
+    height: 20px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #ffffff;
+    background: #cbcbcb;
+
+  }
+}
+
+
+
+.listbox-item {
+  height: 80px;
+  .listbox-item-name {
     position: relative;
-    height: 50px;
-    line-height: 50px;
-    .del {
+    top: 20px;
+  }
+  .listbox-item-endtime {
+    position: relative;
+    top: 30px;
+  }
+  img {
+    display: none;
+  }
+  &.done {
+    img {
+      display: block;
       position: absolute;
-      top: 15px;
-      right: 15px;
-      display: none;
-      width: 20px;
-      height: 20px;
-      line-height: 16px;
-      text-align: center;
-      border-radius: 50%;
-      font-weight: bold;
-      color: #ffffff;
-      background: #cbcbcb;
-      
+      height: 80px;
+      top: 0;
+    }
+
+  }
+  .glyphicon-flag {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    &.high {
+      color: red;
+    }
+    &.middle {
+      color: orange;
+    }
+    &.low {
+      color: green;
     }
   }
 }
 
-.listbox {
-  .listbox-item {
-    height: 80px;
-    .listbox-item-name {
-      position: relative;
-      top: 20px;
-    }
-    .listbox-item-endtime {
-      position: relative;
-      top: 30px;
-    }
-    img {
-      display: none;
-    }
-    &.done {
-      img {
-        display: block;
-        position: absolute;
-        height: 80px;
-        top: 0;
-      }
-      
-    }
-    .glyphicon-flag {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      &.high {
-        color: red;
-      }
-      &.middle {
-        color: orange;
-      }
-      &.low {
-        color: green;
-      }
-    }
-  }
-  .listbox-sortbox {
-    padding: 10px;
-    position: absolute;
-    right: 0;
-    width: 100%;
-    bottom: 50px;
-    height: 100px;
-    background: #E7E7E7;
-    opacity: 0.7;
-    border-top: 1px solid #cccccc;
-    .sort-by {
-      margin-bottom: 10px;
-    }
+.listbox-sortbox {
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  bottom: 50px;
+  height: 100px;
+  background: #E7E7E7;
+  opacity: 0.7;
+  border-top: 1px solid #cccccc;
+  .sort-by {
+    margin-bottom: 10px;
   }
 }
 

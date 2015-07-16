@@ -120,20 +120,9 @@ main {
   top: -1px;
 }
 
-/* line 53, ../sass/screen.scss */
-.categorybox,
-.listbox {
-  position: relative;
-  flex-basis: 320px;
-  box-sizing: border-box;
-  border-left: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc;
-}
-/* line 61, ../sass/screen.scss */
-.categorybox .categorybox-addbutton,
-.categorybox .listbox-addbutton,
-.listbox .categorybox-addbutton,
-.listbox .listbox-addbutton {
+/* line 55, ../sass/screen.scss */
+.categorybox-addbutton,
+.listbox-addbutton {
   position: absolute;
   height: 50px;
   left: 0;
@@ -146,16 +135,24 @@ main {
   cursor: pointer;
   -webkit-user-select: none;
 }
-/* line 74, ../sass/screen.scss */
-.categorybox .categorybox-addbutton span,
-.categorybox .listbox-addbutton span,
-.listbox .categorybox-addbutton span,
-.listbox .listbox-addbutton span {
+/* line 68, ../sass/screen.scss */
+.categorybox-addbutton span,
+.listbox-addbutton span {
   position: absolute;
   top: 18px;
   right: 15px;
 }
-/* line 82, ../sass/screen.scss */
+
+/* line 76, ../sass/screen.scss */
+.categorybox,
+.listbox {
+  position: relative;
+  flex-basis: 320px;
+  box-sizing: border-box;
+  border-left: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 87, ../sass/screen.scss */
 .categorybox ul li,
 .listbox ul li {
   position: relative;
@@ -164,18 +161,18 @@ main {
   cursor: pointer;
   -webkit-user-select: none;
 }
-/* line 88, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 .categorybox ul li:hover,
 .listbox ul li:hover {
   background-color: #eee !important;
 }
-/* line 89, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .categorybox ul li:hover .del,
 .listbox ul li:hover .del {
   display: block;
 }
 
-/* line 98, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .taskbox {
   flex-grow: 1;
   box-sizing: border-box;
@@ -183,81 +180,82 @@ main {
   border-bottom: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
 }
-/* line 104, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .taskbox .notice {
   display: flex;
   height: 200px;
   align-items: center;
   justify-content: center;
 }
-/* line 109, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .taskbox .notice h2 {
   font-size: 16px;
 }
-/* line 113, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .taskbox form {
   padding: 20px;
 }
-/* line 116, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .taskbox form .form-group label {
   margin-bottom: 10px;
 }
-/* line 119, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .taskbox form .form-group .radio-inline {
   position: relative;
   left: 320px;
 }
-/* line 124, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 .taskbox form .form-group .radio-inline span {
   position: relative;
   top: 5px;
 }
-/* line 127, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .taskbox form .form-group .radio-inline span.high {
   color: red;
 }
-/* line 130, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 .taskbox form .form-group .radio-inline span.middle {
   color: orange;
 }
-/* line 133, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 .taskbox form .form-group .radio-inline span.low {
   color: green;
 }
-/* line 138, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .taskbox form .form-group .taskcontent {
   resize: none;
   height: 200px;
 }
 
-/* line 147, ../sass/screen.scss */
-.categorybox .categorybox-addbox {
+/* line 151, ../sass/screen.scss */
+.categorybox-addbox {
   padding: 0 15px;
   position: relative;
   border-bottom: 1px solid #cccccc;
   height: 50px;
   line-height: 50px;
 }
-/* line 153, ../sass/screen.scss */
-.categorybox .categorybox-addbox input[type="text"] {
+/* line 157, ../sass/screen.scss */
+.categorybox-addbox input[type="text"] {
   position: absolute;
   top: 8px;
   width: 220px;
 }
-/* line 158, ../sass/screen.scss */
-.categorybox .categorybox-addbox input[type="submit"] {
+/* line 162, ../sass/screen.scss */
+.categorybox-addbox input[type="submit"] {
   position: absolute;
   top: 8px;
   right: 15px;
 }
-/* line 164, ../sass/screen.scss */
-.categorybox .categorybox-item {
+
+/* line 168, ../sass/screen.scss */
+.categorybox-item {
   position: relative;
   height: 50px;
   line-height: 50px;
 }
-/* line 168, ../sass/screen.scss */
-.categorybox .categorybox-item .del {
+/* line 172, ../sass/screen.scss */
+.categorybox-item .del {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -272,51 +270,52 @@ main {
   background: #cbcbcb;
 }
 
-/* line 187, ../sass/screen.scss */
-.listbox .listbox-item {
+/* line 191, ../sass/screen.scss */
+.listbox-item {
   height: 80px;
 }
-/* line 189, ../sass/screen.scss */
-.listbox .listbox-item .listbox-item-name {
+/* line 193, ../sass/screen.scss */
+.listbox-item .listbox-item-name {
   position: relative;
   top: 20px;
 }
-/* line 193, ../sass/screen.scss */
-.listbox .listbox-item .listbox-item-endtime {
+/* line 197, ../sass/screen.scss */
+.listbox-item .listbox-item-endtime {
   position: relative;
   top: 30px;
 }
-/* line 197, ../sass/screen.scss */
-.listbox .listbox-item img {
+/* line 201, ../sass/screen.scss */
+.listbox-item img {
   display: none;
 }
-/* line 201, ../sass/screen.scss */
-.listbox .listbox-item.done img {
+/* line 205, ../sass/screen.scss */
+.listbox-item.done img {
   display: block;
   position: absolute;
   height: 80px;
   top: 0;
 }
-/* line 209, ../sass/screen.scss */
-.listbox .listbox-item .glyphicon-flag {
+/* line 213, ../sass/screen.scss */
+.listbox-item .glyphicon-flag {
   position: absolute;
   right: 20px;
   top: 20px;
 }
-/* line 213, ../sass/screen.scss */
-.listbox .listbox-item .glyphicon-flag.high {
+/* line 217, ../sass/screen.scss */
+.listbox-item .glyphicon-flag.high {
   color: red;
 }
-/* line 216, ../sass/screen.scss */
-.listbox .listbox-item .glyphicon-flag.middle {
+/* line 220, ../sass/screen.scss */
+.listbox-item .glyphicon-flag.middle {
   color: orange;
 }
-/* line 219, ../sass/screen.scss */
-.listbox .listbox-item .glyphicon-flag.low {
+/* line 223, ../sass/screen.scss */
+.listbox-item .glyphicon-flag.low {
   color: green;
 }
-/* line 224, ../sass/screen.scss */
-.listbox .listbox-sortbox {
+
+/* line 229, ../sass/screen.scss */
+.listbox-sortbox {
   padding: 10px;
   position: absolute;
   right: 0;
@@ -327,12 +326,12 @@ main {
   opacity: 0.7;
   border-top: 1px solid #cccccc;
 }
-/* line 234, ../sass/screen.scss */
-.listbox .listbox-sortbox .sort-by {
+/* line 239, ../sass/screen.scss */
+.listbox-sortbox .sort-by {
   margin-bottom: 10px;
 }
 
-/* line 240, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
 .ui-datepicker {
   width: 240px;
 }
